@@ -33,7 +33,9 @@ public class CosmeticsPatch implements ClientModInitializer {
  private static Gson cpJson;
  private static List<Identifier> cpTextures;
  private static List<Integer> cpDelays;
- private static long cpStart,cpLastPoll;
+ private static long cpStart,cpLastPoll,cpLastFileSize,cpDiskReads;
+ private static java.nio.file.attribute.FileTime cpLastFileTime;
+ private static JsonObject cpState;
  private static Object cpNickRow,cpPreviousNick;
  private static String cpNickOwner;
  private static boolean cpRegistered;
@@ -55,13 +57,15 @@ public class CosmeticsPatch implements ClientModInitializer {
  private static Path cpPath(){return cpDirectory.resolve(cpOwner+".json");}
  private static synchronized void cpTick(Minecraft mc)throws Exception{
   UUID id=mc.getUser().getProfileId();String name=mc.getUser().getName();
-  if(!Objects.equals(id,cpOwner)||!Objects.equals(name,cpName)){cpRestoreNick();cpClearCape(mc);cpRaw="";cpOwner=id;cpName=name;}
+  if(!Objects.equals(id,cpOwner)||!Objects.equals(name,cpName)){cpRestoreNick();cpClearCape(mc);cpRaw="";cpOwner=id;cpName=name;cpLastFileTime=null;cpState=null;}
   if(System.nanoTime()-cpLastPoll<500_000_000L)return;cpLastPoll=System.nanoTime();
   cpMigrate();Path file=cpPath();if(!Files.isRegularFile(file,LinkOption.NOFOLLOW_LINKS))return;
+  var modified=Files.getLastModifiedTime(file,LinkOption.NOFOLLOW_LINKS);long fileSize=Files.size(file);if(modified.equals(cpLastFileTime)&&fileSize==cpLastFileSize){if(cpState!=null&&cpState.has("nickname"))cpApplyNick(cpState,false);return;}cpDiskReads++;
   byte[] bytes;try(InputStream in=Files.newInputStream(file,LinkOption.NOFOLLOW_LINKS)){bytes=in.readNBytes(67_108_865);}if(bytes.length>67_108_864)throw new IOException("Cosmetics state exceeds 64 MiB");
   String raw=new String(bytes,StandardCharsets.UTF_8);JsonObject state=JsonParser.parseString(raw).getAsJsonObject();
   if(!cpOwner.toString().equals(state.get("uuid").getAsString())||state.get("schema").getAsInt()!=1)throw new IOException("Cosmetics state owner/schema mismatch");
   if(!raw.equals(cpRaw)){state=cpValidate(state);cpApplyCape(mc,state);cpApplyNick(state,true);cpRaw=raw;System.out.println("[Nebula] Applied cosmetics revision "+state.get("revision"));}else if(state.has("nickname"))cpApplyNick(state,false);
+  cpState=state;cpLastFileTime=modified;cpLastFileSize=fileSize;
  }
  private static void cpMigrate()throws IOException{
   if(Files.exists(cpPath(),LinkOption.NOFOLLOW_LINKS))return;
@@ -113,12 +117,12 @@ public class CosmeticsPatch implements ClientModInitializer {
  }
  private static synchronized JsonObject cpWrite(JsonObject input)throws Exception{
   JsonObject state=cpValidate(input);byte[] bytes=cpJson.toJson(state).getBytes(StandardCharsets.UTF_8);cpCheck(bytes.length<=67_108_864,"State exceeds 64 MiB");Files.createDirectories(cpDirectory);cpCheck(!Files.isSymbolicLink(cpPath()),"Symlinked state file");Path tmp=Files.createTempFile(cpDirectory,".cosmetics-",".tmp");
-  try{Files.write(tmp,bytes);try(FileChannel c=FileChannel.open(tmp,StandardOpenOption.WRITE)){c.force(true);}Files.move(tmp,cpPath(),StandardCopyOption.ATOMIC_MOVE,StandardCopyOption.REPLACE_EXISTING);}finally{Files.deleteIfExists(tmp);}return cpRead();
+  try{Files.write(tmp,bytes);try(FileChannel c=FileChannel.open(tmp,StandardOpenOption.WRITE)){c.force(true);}Files.move(tmp,cpPath(),StandardCopyOption.ATOMIC_MOVE,StandardCopyOption.REPLACE_EXISTING);cpLastFileTime=null;}finally{Files.deleteIfExists(tmp);}return cpRead();
  }
  private static void cpReply(HttpExchange exchange,int code,String text,String type)throws IOException{byte[] bytes=text.getBytes(StandardCharsets.UTF_8);exchange.getResponseHeaders().set("Content-Type",type+"; charset=utf-8");exchange.sendResponseHeaders(code,bytes.length);exchange.getResponseBody().write(bytes);}
  private static void cpHandle(HttpExchange exchange)throws IOException{
   try{
-   Headers h=exchange.getRequestHeaders(),out=exchange.getResponseHeaders();out.set("Cache-Control","no-store");out.set("X-Content-Type-Options","nosniff");out.set("Content-Security-Policy","default-src 'self'; script-src 'nonce-"+cpToken+"'; style-src 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
+   Headers h=exchange.getRequestHeaders(),out=exchange.getResponseHeaders();out.set("Cache-Control","no-store");out.set("X-Content-Type-Options","nosniff");out.set("Content-Security-Policy","default-src 'self'; script-src 'nonce-"+cpToken+"'; worker-src blob:; font-src 'self' data:; style-src 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' data: blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
    if(!cpAuthority.equalsIgnoreCase(h.getFirst("Host"))){cpReply(exchange,403,"Invalid host","text/plain");return;}
    String origin=h.getFirst("Origin");if(origin!=null&&!origin.equals("http://"+cpAuthority)){cpReply(exchange,403,"Invalid origin","text/plain");return;}
    String path=exchange.getRequestURI().getPath(),method=exchange.getRequestMethod();

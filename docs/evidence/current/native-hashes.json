@@ -1,0 +1,12 @@
+{
+  "sha256": "0f34574ebbe06259cabb04e3cf8918d7cedc7bc1a6aa8bc9d10b2523d41d2f93",
+  "native_class_names_preserved": true,
+  "native_hashes": {
+    "skiko-windows-x64.dll": "ea0904169cb62218b1baa119a8525857092b5d949b543768e2aae7bbe049d7c0",
+    "hyperlane-windows-x86_64.dll": "8528c831e201c6d617d447a8e20b48174dcd15ce1674b22e4c341749aab95728",
+    "cinewire-windows-x86_64.zip": "9c2153ae2654033a420559cd1db78514cc72e991fbf31c72112c34ed3f14f3be",
+    "bridge.dll": "5bba662fcb604024bc2ee86952113ee5ccb1f1f988f6eb6dd9020a4f709f232f",
+    "core.dll": "c13f7ae8ec54c3aea16060640cab70d292631166ce471a0cdc9b45f2143538cc",
+    "client.dll": "5a0fb2750d9d78f07201f43c7962954ea66a15b90e56937c6a8f0e4d6f8a51c4"
+  }
+}

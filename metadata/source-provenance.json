@@ -1,0 +1,41 @@
+{
+  "note": "File identities only; private upload IDs, credentials and personal runtime data are not published. Current normalized editor source and pinned binary inputs are included separately.",
+  "user_supplied_files": [
+    {
+      "filename": "nebulaclient-mirror.zip",
+      "role": "user-supplied website mirror; normalized source is in editor/mirror",
+      "size": 3560786,
+      "sha256": "fd8629cd5f04f04e01f73dacba562bb0162899e9925430ec0475585fb50fbac7"
+    },
+    {
+      "filename": "crash-2026-11-16_16.05.32-client.txt",
+      "role": "user-supplied Vulkan crash report; redacted technical excerpt published",
+      "size": 16516,
+      "sha256": "459c790f60cab16579791bff7a00854f8045b80b155f56413c8d66da08b82a9c"
+    },
+    {
+      "filename": "nebula-original-editor-modules.json",
+      "role": "user-supplied editor modules; earlier reference source",
+      "size": 6691832,
+      "sha256": "edc194c25ea4bd82d185b501228828481d78d4da2710eceb7d27d73c280e8152"
+    },
+    {
+      "filename": "Cosmetic Customizer _ NebulaClient.html",
+      "role": "user-supplied saved cosmetics pages; earlier visual/behavior reference",
+      "size": 2031262,
+      "sha256": "81ecf59055076c159ceaa700ca33e8920c1a46d1218984945583ed445fe4df75"
+    },
+    {
+      "filename": "Cosmetic Customizer _ NebulaClient (2).html",
+      "role": "user-supplied saved cosmetics pages; earlier visual/behavior reference",
+      "size": 2595341,
+      "sha256": "fd341614ce96a19234b89965964990a97d7491141b29171c7284c1dbe352a2bc"
+    },
+    {
+      "filename": "Cosmetic Customizer _ NebulaClient (1).html",
+      "role": "user-supplied saved cosmetics pages; earlier visual/behavior reference",
+      "size": 2407595,
+      "sha256": "f5488d355ceda7d5011831e27627302fed1e780285c21d602144174b4539a123"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "published_sha256": "0f34574ebbe06259cabb04e3cf8918d7cedc7bc1a6aa8bc9d10b2523d41d2f93",
+  "rebuilt_sha256": "2a0e9da938e819b21c7dc512a1420db6aba9f92e1413f999f192dd4edf11d9b5",
+  "entries_added": [],
+  "entries_removed": [],
+  "entries_changed": [],
+  "all_entry_bytes_identical": true,
+  "comparison": "SHA256 of every decompressed archive entry"
+}

@@ -1,0 +1,19 @@
+{
+  "previous_sha256": "b8110f082376c1b97758b54e85cce379aa0e611a215105ee30bd9c55e1d935e0",
+  "sha256": "b21cf761521b2b731718060d6840603c9587440045c7e0eb3f94856f3df4ee20",
+  "changed_entries": [
+    "zip/nebula/client/IlllIlIIllllIIIIllIIlllIIlIIlIlIlIllIlIIIIlIlIIlIllIllIIIllIIIII.class"
+  ],
+  "added_entries": [],
+  "removed_entries": [],
+  "fix": "Select OpenGL before Minecraft construction; packaged Windows Skia has no Vulkan JNI; original saved preference retained",
+  "mixins_changed": false,
+  "new_classes_or_dlls": false,
+  "validation": {
+    "explicit_vulkan_launch": "passed: actual backend com.mojang.blaze3d.opengl.GlDevice",
+    "saved_vulkan_preference_preserved": true,
+    "renderer_startup": "passed under Windows Java/Wine/OpenGL",
+    "animated_cape_frames_registered": 15
+  },
+  "limitation": "Windows Vulkan JNI binding remains unavailable; this is an OpenGL compatibility fix, not a Vulkan implementation. Linux-native support was not assessed."
+}

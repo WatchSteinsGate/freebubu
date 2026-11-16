@@ -1,0 +1,4 @@
+[13:47:21] [Render thread/INFO]: Using graphics backend Vulkan, using drivers: 1.4.305 llvmpipe Mesa 25.0.7-2+deb13u1 (LLVM 19.1.7)
+[13:48:16] [animation-validation/INFO]: [STDOUT]: [AnimationProbe] PASS: 15 animated textures observed; zero state rereads or texture replacement over 10 seconds
+PASS: JDWP attached; VM threads and version accessible: 25.0.5
+PASS: native GL surface and borrowed image interop; rendered texture pixels verified

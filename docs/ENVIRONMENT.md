@@ -67,16 +67,21 @@ NEBULA_JDK_BIN=/workspace/tools/linux-java/jdk-25.0.5+8/bin ./test-stats.sh
 ```
 
 Install the pinned Python packages in a project virtual environment and ensure
-Chromium is installed, then run `tests/test_cape.py` and `test_cape_highres.py`.
+Chromium is installed, then run `tests/test_mirror_editor.py`, `tests/test_mirror_highres.py` and `tests/test_cape_preview.py`.
 Their `--live` modes use the actual editor and modify/reset its saved cosmetics.
 Only use them against a dedicated test profile. Test screenshots/exports go to
 `build/test-output`, which Git ignores.
 
-The test identity was unauthenticated. Login, authenticated multiplayer, production
-macro activity, native debugging, and HTTP interception remain separate checks.
+The test identity was unauthenticated. Login, authenticated multiplayer and production macro activity remain separate checks. Java interception and native TLS/HTTP 101 were subsequently observed, but complete authenticated native sessions and native debugging remain unverified. BUILD.md supersedes the older minimal rebuild example above.
 Never put platform credentials, private keys, or storage.to owner tokens into Git.
 
 Build the external read-only probe using `tools/build-probe.sh` with JDK 25. Its
 manifest is tracked. To use it in the retained workspace, set
 `NEBULA_TEST_AGENT=/workspace/freebubu/build/probe.jar` only for the test launch.
 The probe reports pass/fail in the client log and does not modify classes.
+
+## Current native/software Vulkan runtime
+
+The cloud Vulkan smoke test adds `/workspace/tools/vulkan-runtime/usr/lib/x86_64-linux-gnu` to `LD_LIBRARY_PATH` and selects `/workspace/tools/vulkan-runtime/usr/share/vulkan/icd.d/lvp_icd.json` through `VK_ICD_FILENAMES`. These are test-machine Mesa inputs, not new files shipped inside the Windows JAR. Windows users use their installed Vulkan driver.
+
+The investigation launchers archived under `tools/workspace-runtime/` accept `NEBULA_DEV_JVM_ARGS` and an optional test agent, and the Vulkan variant passes Minecraft's game argument `--graphicsBackend vulkan`. JVM proxy configuration and native routing/trust setup are separate; see `tests/network/README.md`. Temporary GUI keybind/proxy changes used for testing were restored. The supported JAR was copied back into the test mods directory after the broken-build comparison.

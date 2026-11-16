@@ -1,0 +1,1 @@
+import{o as e}from"./BaMv3IGQ.js";import{pn as t}from"./DAji9eeE.js";function n(n,r){let i=e().hook(n,r);t(i)}export{n as t};

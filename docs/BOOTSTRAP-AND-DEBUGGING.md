@@ -1,92 +1,48 @@
-# Bootstrap, recorded constants, debugging, and TLS
+# Resolver, debugging and TLS — current development build
 
-## What is present now
+The supplied input already contained the recorded resolver and native compatibility layer. Their vendor provenance has not been established. The current native client is intentionally patched for debugging; packaging generates its new resource SHA-256 and updates the bootstrap's expected payload hash. Integrity verification stays enabled.
 
-The native/bootstrap layer was already in the supplied input. Its vendor
-provenance has not been established. It was retained, not rewritten by the direct
-stats/cosmetics patch.
+## Resolver reconstruction attempt
 
-| Component | Observed role |
-| --- | --- |
-| `runtime/loader.jar` | `NativeLoader` and `zip.nebula.loader.Loader`; loads the Windows payload in a separate classloader. |
-| `runtime/bridge.dll` | JNI bridge installation plus Skia/framebuffer and worker-policy compatibility exports. |
-| `runtime/core.dll` | JNI implementations associated with numerous obfuscated original client classes. |
-| `runtime/client.dll` | Main Windows payload loaded by the prelaunch path. Full internals are not audited. |
-| `assets/bootstrap.bin` | Map of recorded long-valued obfuscator bootstrap results, not the saved cosmetics/website data. |
+`thatonecatgif/data/bootstrap.bin` still holds 155,936 records (22,884,292 bytes), covering 3,867 owners and 17,915 distinct results. Its keys contain owner, bootstrap name and two long arguments. Argument B's high 32 bits identify the class; its low 32 bits identify the site. Each observed class ID maps to exactly one owner. A and B are individually unique across the snapshot.
 
-`thatonecatgif.Bootstrap` is the declared prelaunch entrypoint. It checks Windows
-x86-64, checks the payload SHA256, extracts/resolves embedded resources, loads the
-bridge and loader, installs the native bridge, and calls `NebulaClient.earlyLoad`.
-Removing this layer without providing its implementations would break the current
-build. Payload checksums are integrity checks, not evidence of TLS pinning.
+The supplied Java bootstrap body delegates to the table; the original algorithm is absent from that Java method. Native entry points, registration wrappers and the exported `cw_tbl` descriptor were inspected. The latter's relationship to the resolver and callback ABI remain unverified. Tests of simple XOR/subtraction and invertible SplitMix64/Murmur64 seed models did not produce a constant seed for the largest class (1,624 records).
 
-## Recorded bootstrap data
+No independently verified replacement algorithm was recovered. The table and resolver wrapper remain required. `tools/analyze_bootstrap.py` reproduces the structural/candidate analysis and writes a JSON report; `build/resolver-reconstruction.json` contains this run. Completing reconstruction requires further native reverse engineering or the original resolver implementation. Inlining the recordings would not reconstruct the original algorithm.
 
-The 22,884,292-byte `bootstrap.bin` has 155,936 records. `BootstrapData` reads a key
-of `(owner class, bootstrap name, long argument A, long argument B)` and a long
-result. Its bootstrap handler requires a `()long` method type and returns a
-`ConstantCallSite`. Missing or incorrectly typed records throw `BootstrapMethodError`.
+## Native changes
 
-The original obfuscator bootstrap wrapper delegates to `BootstrapData.bootstrap`.
-The data's structure and current use are verified; how the input's author captured
-those values, and whether they were complete for every possible path, is not.
-The website captures are separate reference material for the cosmetics page.
+`patcher/native/debug-patch.json` contains expected bytes and nine guarded patch locations. `tools/patch_native_debug.py` accepts only the exact input native-client SHA-256. Two PE sections hold position-independent leaf functions and a native import table; all original function RVAs stay stable for the existing bridge.
 
-### Can this be changed?
+- `IsDebuggerPresent`: returns false.
+- `CheckRemoteDebuggerPresent`: writes false and returns success for the valid output pointer used by the client.
+- Named `NtQueryInformationProcess` lookups: route debug-port (7), debug-object (30) and debug-flags (31) queries to no-debugger results. Other classes and symbol lookups delegate to the genuine Windows API. Debug-object queries return `STATUS_PORT_NOT_SET`.
+- `NtSetInformationThread`: class 17 (`ThreadHideFromDebugger`) returns success without hiding the thread. Other classes delegate to Windows.
+- Two `SetSecurityInfo` call sites in JNI startup are replaced with success results. These calls set a kernel-object DACL and restrict process access. The general Windows security API is unchanged.
 
-Yes, but not by substituting guessed numbers. A proposed next task is to enumerate
-all call sites using that bootstrap wrapper, prove that each is immutable, match
-its owner/name/arguments to the existing table, and replace it with the exact long
-constant (for example, a bytecode constant load). Dynamic constants and unusual
-call-site forms need separate handling. Assert complete coverage before removing
-the table or its wrapper. Test native initialization, client UI, modules, restart,
-and previously unvisited paths afterwards.
+These address identified paths; this is not a complete audit of every obfuscated native check. The `zip.nebula` native ABI is still retained.
 
-This removes the external recorded-table lookup, but it still uses the same
-recorded values. Deriving fresh results without the snapshot instead requires
-recovering the original resolver/native algorithm and its dependencies. Neither
-strategy has been implemented in the delivered build.
+The WorkerPolicy methods, now consolidated into `zip.nebula.loader.Loader`, skip the optional Wine recovery hooks when JDWP is enabled, fixing a reproduced `Cannot install Linux recovery worker policy` startup failure. `-Dnebula.workerRecovery=false` also disables these hooks explicitly. Normal startup retains the existing recovery behavior.
 
-## What debugging/interception has actually been verified
+## Certificate pinning
 
-- **Startup Java agent:** passed. The read-only `ProbeAgent` test was loaded using
-  `-javaagent`, inspected actual loaded classes, and invoked the original patched
-  statistics method. It was test tooling outside the mod, not an added mod entry.
-- **Dynamic agent attach:** unverified.
-- **JDWP debugger:** unverified.
-- **Native Windows debugger:** unverified.
-- **HTTP Toolkit interception:** unverified.
-- **Certificate pinning removal:** not performed.
+The packaged OkHttp `CertificatePinner.check$okhttp` method now returns without enforcing pins. Ordinary trust-chain and hostname verification remain enabled. This changes pin enforcement in the mod's bundled Java HTTP stack even when callers configure pins.
 
-The unchanged `client.dll` contains references to `IsDebuggerPresent`,
-`CheckRemoteDebuggerPresent`, and X509-related functionality. These identifiers
-alone do not prove that a particular protection is active, nor locate its decision
-path. No claim is made that any arbitrary debugger or agent will work.
+A local TLS test used a dedicated CA and an intentionally mismatched pin. The original JAR rejected it with `Certificate pinning failure`; the patched JAR accepted it when the CA was trusted, and still rejected an untrusted CA and a hostname mismatch. Test CA material stays outside the artifact.
 
-## Work needed to change anti-debugging or anti-MITM behavior
+Actual client interception has now been tested with mitmproxy. Java requests to `api.nebulaclient.net` passed through it. The native WebSocket also completed TLS 1.3 and received `101 Switching Protocols`, with both RSA and ECDSA inspection certificates. No additional native TLS patch was needed for this endpoint.
 
-Treat these as distinct, testable investigations rather than one “disable
-protection” flag:
+The native worker needed process-level TCP forwarding; JVM HTTP proxy settings alone did not route it. Its initial `BadSignature` failure came from the inherited `SSL_CERT_FILE` bundle, which selected a different CA with the same mitmproxy subject instead of using the Windows ROOT store. Preserving that bundle's existing roots and adding the correct inspection CA fixed it. A trusted certificate for `wrong-host.invalid` was still rejected for `api.nebulaclient.net`, confirming native hostname validation remained active.
 
-1. Establish separate baselines for startup instrumentation, dynamic attach,
-   JDWP, and a native debugger. Record exact failures and their active call paths.
-2. Identify active checks in Java and native code, including their initialization
-   order and any integrity dependencies. Check whether an available development
-   configuration already enables the intended debugging path.
-3. Make narrow changes in the owned development build, preserving unrelated
-   initialization and behavior. Re-test each attachment mode and normal startup.
-4. For TLS interception, first establish which connections use Java HTTP stacks
-   versus native networking and whether each honors the configured proxy.
-5. Configure the development proxy and its CA explicitly. Distinguish ordinary
-   certificate/hostname validation failures from actual leaf/public-key pin checks.
-   If a pin check is confirmed, make a scoped development change to that check;
-   retain ordinary TLS certificate and hostname validation rather than installing
-   a blanket trust-all verifier.
-6. Re-test the specific API endpoints, redirects, WebSockets, and native transports
-   that matter. An intercepted Java request does not establish interception of
-   every native request, and working instrumentation does not establish TLS access.
+These results cover the observed API WebSocket and Java requests, not every endpoint or an authenticated session. HTTP Toolkit itself was not installed; the test used the same HTTP CONNECT/TLS interception model through mitmproxy. See [setup instructions](../tests/network/README.md) and [test metadata](../metadata/network-interception.json). The helper `tools/configure-interception-trust.py` creates separate Java and native trust files without changing the originals.
 
-These changes can affect payload integrity requirements and startup. The supplied
-native payload currently has explicit embedded checksums; changes must be handled
-as a deliberate new build, not by silently skipping verification. The current
-release leaves both the native files and their existing integrity checks intact.
+## Validation
+
+- Direct native functions exercised under Windows Java/Wine: debugger flags, debug queries, thread hiding and startup DACL-call removal passed; normal process queries, security APIs and symbol lookups still delegate correctly.
+- Actual Java API requests and native API WebSocket interception: passed. Native trusted-wrong-host rejection: passed. The tested JAR SHA-256 stayed unchanged.
+- Startup Java agent: passed.
+- JDWP: client initialized with the agent enabled; socket attachment, VM inspection and detach passed.
+- Dynamic agent attach: not verified working. Wine returned access denied for the client. A separate unmodified Java control process also failed dynamic attachment, with a remote-thread error (`0xc0000005`), establishing an additional Wine/JDK limitation.
+- Native debugger attachment: unverified working. WineDbg returned access denied (error 5) for both the client and a separate unmodified Java control process, so this environment cannot establish native-attachment support.
+
+`tests/NativeDebugProbe.java`, `tests/PinningProbe.java`, `tests/JdwpProbe.java` and `tests/DebugAttachProbe.java` are external validation tools, not shipped mod classes. Regenerating the native patch plan additionally uses pefile and Keystone (`tools/generate-debug-patch.py`); applying the checked-in native plan itself needs only Python's standard library. Full packaging also uses the pinned pefile dependency; see BUILD.md.

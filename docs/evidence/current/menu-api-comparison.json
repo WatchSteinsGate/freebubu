@@ -1,0 +1,36 @@
+{
+  "fixed_requests": [
+    {
+      "event": "http_request",
+      "host": "api.nebulaclient.net",
+      "route_category": "leaderboard",
+      "status": null,
+      "authorization_present": true
+    },
+    {
+      "event": "http_request",
+      "host": "api.nebulaclient.net",
+      "route_category": "changelog",
+      "status": null,
+      "authorization_present": true
+    },
+    {
+      "event": "http_response",
+      "host": "api.nebulaclient.net",
+      "route_category": "leaderboard",
+      "status": 403,
+      "authorization_present": null
+    },
+    {
+      "event": "http_response",
+      "host": "api.nebulaclient.net",
+      "route_category": "changelog",
+      "status": 200,
+      "authorization_present": null
+    }
+  ],
+  "broken_layout_menu_requests": [],
+  "same_proxy_and_test_account": true,
+  "no_secret_values_recorded": true,
+  "leaderboard_real_account_verified": false
+}

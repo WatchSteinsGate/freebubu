@@ -1,0 +1,41 @@
+{
+  "jar_sha256": "b8110f082376c1b97758b54e85cce379aa0e611a215105ee30bd9c55e1d935e0",
+  "jar_changed": false,
+  "test_platform": "Windows JDK 25 and Windows native DLL under Wine",
+  "proxy": "mitmproxy chained through inherited Cloud proxy; upstream TLS verification enabled",
+  "java_actual_api_interception": "passed",
+  "native_api_websocket_interception": "passed",
+  "native_successes": [
+    {
+      "host": "api.nebulaclient.net",
+      "tls": "TLSv1.3",
+      "phase": "native-ecdsa",
+      "status": 101
+    },
+    {
+      "host": "api.nebulaclient.net",
+      "tls": "TLSv1.3",
+      "phase": "native-final-rsa",
+      "status": 101
+    }
+  ],
+  "native_hostname_negative_test": "passed: certificate signed by trusted CA for wrong-host.invalid rejected for api.nebulaclient.net",
+  "native_wrong_ca_test": "failed as expected with BadSignature before the correct CA was added to SSL_CERT_FILE",
+  "cause": "SSL_CERT_FILE selected an inherited CA file instead of Windows ROOT. A different CA with the same mitmproxy subject existed in that file. Adding the correct inspection CA resolved the error.",
+  "native_routing": "JVM HTTP proxy properties did not route the native worker; external process-level CONNECT forwarding was required",
+  "native_ca_configuration": "Preserve inherited CA roots and append inspection CA in a dedicated bundle, then set SSL_CERT_FILE for the game process",
+  "additional_native_tls_patch_needed": false,
+  "scope": "api.nebulaclient.net native WebSocket and observed Java API requests; not every endpoint",
+  "http_toolkit_itself_tested": false,
+  "authenticated_session_verified": false,
+  "resolver_reconstructed": false,
+  "setup": "tests/network/README.md",
+  "cleanup": {
+    "temporary_windows_ca_removed_from_original_and_test_prefix": true,
+    "test_proxy_and_relay_stopped": true,
+    "forwarding_activation_file_removed": true,
+    "original_debug_client_restored": true
+  },
+  "publication_status": "historical-network-scope",
+  "current_build_manifest": "metadata/auth-compatibility-build.json"
+}

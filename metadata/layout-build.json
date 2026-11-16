@@ -1,0 +1,39 @@
+{
+  "url": "https://storage.to/mZhPAwIFU",
+  "filename": "Nebula-Windows-direct.jar",
+  "size": 192425923,
+  "expires_at": "2026-11-23T12:21:03+00:00",
+  "id": "mZhPAwIFU",
+  "sha256": "859e675774ceeacf2093008b477d98f4950b4903b0310f2534e45c19a5b2d267",
+  "class_count_reduced_by": 3,
+  "new_helper_classes": 0,
+  "loader": "thatonecatgif/loader/Loader.class",
+  "original_mixins_unchanged": true,
+  "data_contents_unchanged": true,
+  "editor_unchanged": true,
+  "native_checksums_valid": true,
+  "native_loader_lookup_patched": true,
+  "native_findclass_sites": [
+    "0x83ef3",
+    "0x84388"
+  ],
+  "native_findclass_stub": "0x2d24000",
+  "native_hashes": {
+    "skiko-windows-x64.dll": "ea0904169cb62218b1baa119a8525857092b5d949b543768e2aae7bbe049d7c0",
+    "hyperlane-windows-x86_64.dll": "8528c831e201c6d617d447a8e20b48174dcd15ce1674b22e4c341749aab95728",
+    "cinewire-windows-x86_64.zip": "9c2153ae2654033a420559cd1db78514cc72e991fbf31c72112c34ed3f14f3be",
+    "bridge.dll": "656bfef852494b313909daf014809b0daaec2ffdb5b5f0151d675eefede294f1",
+    "core.dll": "c13f7ae8ec54c3aea16060640cab70d292631166ce471a0cdc9b45f2143538cc",
+    "client.dll": "f0340143856d6e02884e652ea89fa15303bfbf2ce25b8017936519b54cdb122c"
+  },
+  "key_fields_merged_into_loader": true,
+  "stored_type_switch_classes_removed": 2,
+  "debugger_attach": "PASS",
+  "editor_route": "HTTP200",
+  "animation_test": "PASS: 15 frames, zero unchanged-state rereads or texture replacements over10seconds",
+  "vulkan_test": "PASS: startup/rendering under Wine, Mesa llvmpipe",
+  "jdwp_test": "PASS",
+  "bootstrap_table_retained": true,
+  "publication_status": "superseded-broken-layout",
+  "current_build_manifest": "metadata/auth-compatibility-build.json"
+}

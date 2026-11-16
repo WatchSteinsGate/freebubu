@@ -1,0 +1,31 @@
+{
+  "skiko_version": "0.153.0",
+  "skiko_commit": "219af4abf792da15dca1fc859af7b8a3a3ce0755",
+  "skia_version": "m153-e63f5d6129",
+  "clang_version": "19.1.7",
+  "msvc_crt_version": "14.44",
+  "windows_sdk_version": "10.0.26100",
+  "archives": [
+    {
+      "filename": "skiko-source.zip",
+      "role": "Skiko source v0.153.0",
+      "url": "https://github.com/JetBrains/skiko/archive/refs/tags/v0.153.0.zip",
+      "size": 16360646,
+      "sha256": "e44f2a26a5aa3917c0333df7d5f01be29cc33cf288e861d9976758c7a00a36be"
+    },
+    {
+      "filename": "skia-windows.zip",
+      "role": "Skia Windows release x64 m153-e63f5d6129",
+      "url": "https://github.com/JetBrains/skia/releases/download/m153-e63f5d6129/Skia-m153-e63f5d6129-windows-Release-x64.zip",
+      "size": 58664315,
+      "sha256": "3bc3722b44eb765b72496e2c0a4f58d789a80afedb3d2fd8300ac0c56be5bafe"
+    },
+    {
+      "filename": "xwin.tar.gz",
+      "role": "xwin 0.10.0 x86_64 Linux musl",
+      "url": "https://github.com/Jake-Shadle/xwin/releases/download/0.10.0/xwin-0.10.0-x86_64-unknown-linux-musl.tar.gz",
+      "size": 3416863,
+      "sha256": "d870eb4b2f390878af6da1ccd3cf321d22fcb72720984853b4be732ae597fc88"
+    }
+  ]
+}

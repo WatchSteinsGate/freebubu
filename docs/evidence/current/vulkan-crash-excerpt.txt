@@ -1,0 +1,55 @@
+Technical excerpt of the supplied crash report. Personal paths, arguments and unrelated runtime/profile details omitted.
+Source identity: metadata/source-provenance.json
+
+java.lang.UnsatisfiedLinkError: 'long org.jetbrains.skia.VulkanKt._nMakeVulkan(long, long, long, long, int, long, long, int, java.lang.String[], java.lang.String[], long, long)'
+	at knot//org.jetbrains.skia.VulkanKt._nMakeVulkan(Native Method)
+	at knot//org.jetbrains.skia.VulkanKt.makeVulkan$default(VulkanKt.java:51)
+	at knot//zip.nebula.client.llIIlIlIIIlIIIIIIIlIllllIlIlIllllIlIlllllllIlIIIIIlllIllllllIIll.IIlIIlIIIlIllIlIIlIlIIIlIIIlIIlIIIlIIIlIIlIlIIlIlIlIIllIlIIlIlIl(Unknown Source)
+	at knot//zip.nebula.client.llIIlIlIIIlIIIIIIIlIllllIlIlIllllIlIlllllllIlIIIIIlllIllllllIIll.llIllIlIIllIIIllIllllIllIlllIIIlllIIllIIllIIllIlIllIlllIIlIIIlll(Unknown Source)
+	at knot//zip.nebula.client.lllllllIlllIlIIllllIIIlIIlIlIlllllllIlIIIlIlIlIlIIllIllIIllIIlIl.IlIIlIIlIlIllIllIIlIIIlIIIlIllIIIIIlIlllIlIIlIllllIlIlIIIIIIllII(Unknown Source)
+	at knot//zip.nebula.client.lllllllIlllIlIIllllIIIlIIlIlIlllllllIlIIIlIlIlIlIIllIllIIllIIlIl.IIlllIlIllllllIIllllIIIIlIIIIIIllllIIlIlIllIlIIlllllIIllIllllllI(Unknown Source)
+	at knot//net.minecraft.client.renderer.GameRenderer.handler$bip000$nebula$IlIIIIIIllIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIl(GameRenderer.java)
+	at knot//net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:444)
+	at knot//net.minecraft.client.Minecraft.renderFrame(Minecraft.java:1374)
+	at knot//net.minecraft.client.Minecraft.runTick(Minecraft.java:1269)
+	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:959)
+	at knot//net.minecraft.client.main.Main.mixinextras$bridge$run$19(Main.java)
+	at knot//net.minecraft.client.main.Main.md81c010$nebula$llllIllIllIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIl$1(Main.java)
+	at knot//zip.nebula.client.IlllIlIIllllIIIIllIIlllIIlIIlIlIlIllIlIIIIlIlIIlIllIllIIIllIIIII.lIlIlIlIIIlllIIIIlIIlIIllIIlIIlIIlIIllIIlIIlllIllIIIIIIIIlIlIIII(Unknown Source)
+	at knot//net.minecraft.client.main.Main.wrapOperation$bjh000$nebula$IIIlIllIllIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIl(Main.java)
+	at knot//net.minecraft.client.main.Main.main(Main.java:292)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:115)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:129)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70)
+	at knot//org.jetbrains.skia.VulkanKt._nMakeVulkan(Native Method)
+	at knot//org.jetbrains.skia.VulkanKt.makeVulkan$default(VulkanKt.java:51)
+	at knot//zip.nebula.client.llIIlIlIIIlIIIIIIIlIllllIlIlIllllIlIlllllllIlIIIIIlllIllllllIIll.IIlIIlIIIlIllIlIIlIlIIIlIIIlIIlIIIlIIIlIIlIlIIlIlIlIIllIlIIlIlIl(Unknown Source)
+	at knot//zip.nebula.client.llIIlIlIIIlIIIIIIIlIllllIlIlIllllIlIlllllllIlIIIIIlllIllllllIIll.llIllIlIIllIIIllIllllIllIlllIIIlllIIllIIllIIllIlIllIlllIIlIIIlll(Unknown Source)
+	at knot//zip.nebula.client.lllllllIlllIlIIllllIIIlIIlIlIlllllllIlIIIlIlIlIlIIllIllIIllIIlIl.IlIIlIIlIlIllIllIIlIIIlIIIlIllIIIIIlIlllIlIIlIllllIlIlIIIIIIllII(Unknown Source)
+	at knot//zip.nebula.client.lllllllIlllIlIIllllIIIlIIlIlIlllllllIlIIIlIlIlIlIIllIllIIllIIlIl.IIlllIlIllllllIIllllIIIIlIIIIIIllllIIlIlIllIlIIlllllIIllIllllllI(Unknown Source)
+	at knot//net.minecraft.client.renderer.GameRenderer.handler$bip000$nebula$IlIIIIIIllIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIl(GameRenderer.java)
+	at knot//net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:444)
+	at knot//net.minecraft.client.Minecraft.fillReport(Minecraft.java:2496)
+	at knot//net.minecraft.client.Minecraft.emergencySaveAndCrash(Minecraft.java:1008)
+	at knot//net.minecraft.client.Minecraft.run(Minecraft.java:983)
+	at knot//net.minecraft.client.main.Main.mixinextras$bridge$run$19(Main.java)
+	at knot//net.minecraft.client.main.Main.md81c010$nebula$llllIllIllIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIl$1(Main.java)
+	at knot//zip.nebula.client.IlllIlIIllllIIIIllIIlllIIlIIlIlIlIllIlIIIIlIlIIlIllIllIIIllIIIII.lIlIlIlIIIlllIIIIlIIlIIllIIlIIlIIlIIllIIlIIlllIllIIIIIIIIlIlIIII(Unknown Source)
+	at knot//net.minecraft.client.main.Main.wrapOperation$bjh000$nebula$IIIlIllIllIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIl(Main.java)
+	at knot//net.minecraft.client.main.Main.main(Main.java:292)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:517)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at org.prismlauncher.launcher.impl.StandardLauncher.launch(StandardLauncher.java:115)
+	at org.prismlauncher.EntryPoint.listen(EntryPoint.java:129)
+	at org.prismlauncher.EntryPoint.main(EntryPoint.java:70)
+	Minecraft Version: 26.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 25.0.1, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
+	Graphics card #0 name: Intel(R) UHD Graphics
+	Graphics card #0 vendor: Intel Corporation
+	Graphics card #0 versionInfo: 32.0.101.7088

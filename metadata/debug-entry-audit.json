@@ -1,0 +1,17 @@
+{
+  "baseline": "Nebula-Windows-organized-90bce2b3.jar",
+  "added_entries": [],
+  "removed_entries": [],
+  "changed_entries": [
+    "natives/windows-x64/checksums.properties",
+    "natives/windows-x64/client.dll",
+    "nebula/bridge/Bootstrap.class",
+    "nebula/bridge/WorkerPolicy.class",
+    "okhttp3/CertificatePinner.class"
+  ],
+  "test_or_build_classes_in_output": [],
+  "mixin_configs_changed": [],
+  "jar_sha256": "b8110f082376c1b97758b54e85cce379aa0e611a215105ee30bd9c55e1d935e0",
+  "publication_status": "historical-debug-audit",
+  "current_build_manifest": "metadata/auth-compatibility-build.json"
+}

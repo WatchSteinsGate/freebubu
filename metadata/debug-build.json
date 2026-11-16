@@ -1,0 +1,26 @@
+{
+  "jar": "build/artifacts/Nebula-Windows-direct.jar",
+  "entries": 20285,
+  "version": "2.5.7",
+  "sha256": "b8110f082376c1b97758b54e85cce379aa0e611a215105ee30bd9c55e1d935e0",
+  "native_debug_patch_sites": 9,
+  "okhttp_pin_verification_disabled": true,
+  "original_resolver_reconstructed": false,
+  "native_client_sha256": "5a0fb2750d9d78f07201f43c7962954ea66a15b90e56937c6a8f0e4d6f8a51c4",
+  "validation": {
+    "native_debug_api_probe": "passed",
+    "java_pinning_tls_negative_tests": "passed",
+    "startup_javaagent": "passed",
+    "jdwp_attach": "passed",
+    "dynamic_attach": "unverified: Wine control JVM also fails",
+    "native_debugger_attach": "unverified: Wine control JVM also returns error 5",
+    "native_tls_interception": "passed: api.nebulaclient.net TLS 1.3 and WebSocket HTTP 101 through mitmproxy with explicit routing and CA bundle",
+    "resolver_reconstructed": false,
+    "native_hostname_validation": "passed: trusted certificate for wrong hostname rejected"
+  },
+  "download_url": "https://storage.to/lAFcN2VKK",
+  "expires_at": "2026-11-23T08:41:20+00:00",
+  "network_interception_report": "metadata/network-interception.json",
+  "publication_status": "historical-debug-build",
+  "current_build_manifest": "metadata/auth-compatibility-build.json"
+}

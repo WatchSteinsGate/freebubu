@@ -7,3 +7,6 @@ __pycache__/
 *.exe
 *.log
 !docs/evidence/*.log
+
+# Only deliberately sanitized current evidence logs are published.
+!docs/evidence/current/*.log

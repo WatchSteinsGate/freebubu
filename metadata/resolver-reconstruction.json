@@ -1,0 +1,44 @@
+{
+  "records": 155936,
+  "bytes": 22884292,
+  "owners": 3867,
+  "class_ids": 3867,
+  "class_ids_map_to_single_owner": true,
+  "unique_A": 155936,
+  "unique_B": 155936,
+  "distinct_results": 17915,
+  "candidate_checks": {
+    "identity inverse, xor B": {
+      "records": 1624,
+      "distinct_inferred_seeds": 1624,
+      "constant_seed_match": false
+    },
+    "identity inverse, subtract B": {
+      "records": 1624,
+      "distinct_inferred_seeds": 1624,
+      "constant_seed_match": false
+    },
+    "splitmix64 inverse, xor B": {
+      "records": 1624,
+      "distinct_inferred_seeds": 1624,
+      "constant_seed_match": false
+    },
+    "splitmix64 inverse, subtract B": {
+      "records": 1624,
+      "distinct_inferred_seeds": 1624,
+      "constant_seed_match": false
+    },
+    "murmur64 inverse, xor B": {
+      "records": 1624,
+      "distinct_inferred_seeds": 1624,
+      "constant_seed_match": false
+    },
+    "murmur64 inverse, subtract B": {
+      "records": 1624,
+      "distinct_inferred_seeds": 1624,
+      "constant_seed_match": false
+    }
+  },
+  "reconstructed": false,
+  "note": "B has a class ID in its high 32 bits and a site index in its low 32 bits. Candidate invertible mixers did not recover a fixed per-class seed. Recorded data remains required; no guessed resolver was installed."
+}

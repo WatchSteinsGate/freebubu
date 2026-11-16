@@ -1,74 +1,36 @@
-# Nebula direct-patch handoff
+# Nebula Windows build and complete handoff
 
-Current Windows Fabric mod: **Nebula 2.5.7 / Minecraft 26.2 / Java 25**.
-This repository contains the build sources, embedded cosmetics editor, regression
-tests, pinned dependency metadata, screenshots, and handoff notes for the supplied
-JAR and its direct-patched successor.
+Current deliverable: **Nebula 2.5.7 / Minecraft 26.2 / Fabric / Windows x86-64 / Java 25**.
 
-**Download the current JAR and the required original input from the
-[handoff release](https://github.com/WatchSteinsGate/freebubu/releases/tag/handoff-2026-11-16).**
-Checksums and sizes are recorded in [metadata/builds.json](metadata/builds.json)
-and [SHA256SUMS](SHA256SUMS). Large JARs are stored with Git LFS under `artifacts/`; the release links to them.
-The ordinary Git history stores small LFS pointers. Use `git lfs pull` to fetch
-the binaries after cloning, or follow the download links on the release page.
+**[Download and release notes](https://github.com/WatchSteinsGate/freebubu/releases/tag/handoff-2026-11-16-auth-compatibility)** · **[Full current handoff](docs/HANDOFF.md)** · **[Build instructions](docs/BUILD.md)** · **[Findings and failed approaches](docs/history/FINDINGS.md)**
 
-The direct build changes five existing Java classes, the existing editor resource,
-and mod metadata; it removes 23 stats/cosmetics add-on entries and adds **zero JAR
-entries**. The native DLLs remain byte-for-byte unchanged. Original Nebula mixins
-remain, while the inherited stats/cosmetics helper mixins are removed.
-
-- [Full handoff](docs/HANDOFF.md): architecture, changes, paths, validation, and gaps.
-- [Bootstrap and debugging analysis](docs/BOOTSTRAP-AND-DEBUGGING.md): what is known,
-  what has not been changed, and the work needed for future changes.
-- [Environment and runtime](docs/ENVIRONMENT.md): Wine, Java, Fabric, startup, tests.
-- [Archive audit](docs/evidence/archive-audit.json) and
-  [patch-site audit](docs/evidence/patch-audit.json).
-
-![Cape editor using a synthetic 15-frame GIF](docs/screenshots/cape-15-frames-live.png)
-
-## Build
-
-Requirements: Linux/macOS Bash, Python 3.11+, curl, and **JDK 25**. Windows builds
-can use an equivalent environment such as WSL. Runtime testing uses Windows Java
-under Wine, independently of the Linux build JDK.
-
-```sh
-export JAVA_HOME=/path/to/jdk-25
-./build.sh
-./test-stats.sh
-```
-
-`build.sh` downloads the pinned original artifact and dependency artifacts
-unless cached, verifies SHA256 checksums, compiles build-time templates, and merges
-them into the existing classes with ASM. Output:
+The supported JAR is `artifacts/Nebula-Windows-direct.jar`:
 
 ```text
-build/artifacts/Nebula-Windows-direct.jar
-build/patch-audit.json
+SHA256  0f34574ebbe06259cabb04e3cf8918d7cedc7bc1a6aa8bc9d10b2523d41d2f93
+Size    192425795 bytes
 ```
 
-Optional overrides: `NEBULA_BASE_JAR` points to the exact original input;
-`NEBULA_JDK_BIN` points to the JDK's `bin` directory; `NEBULA_CLASSPATH` supplies an
-existing dependency classpath. These do not change the original input requirement.
-The build reproduces patched contents; ZIP timestamps can change the whole-file
-checksum. Compare archive entry contents as well as release checksums.
+JARs use Git LFS. Run `git lfs pull` after cloning; ordinary Git pointers are not runnable JARs. [SHA256SUMS](SHA256SUMS) and [metadata/builds.json](metadata/builds.json) identify the supported Windows artifact, exact original Windows input and experimental Linux reference. The Linux reference is a build/research input, not the supported Windows download.
 
-## Browser tests
+The current build includes the mirror-based nickname/cape editor, the visible/rotatable animated cape preview, cape state/texture caching, direct statistics patches, real Windows Vulkan JNI bindings, identified native debugging patches and disabled OkHttp pin enforcement. Existing helper members were consolidated into existing classes; the original mixin configuration remains. Original `Loader` and `Key` names are preserved because renaming/merging them broke menu token lookup. Resources retain the reorganized `thatonecatgif/` and `assets/nebula/` layout.
 
-Install `tests/requirements.txt`, then run:
+Verified menu regression: with identical proxy/test-account settings, the broken layout JAR made no changelog/leaderboard requests; the corrected JAR sent both with authorization present. **Changelogs returned HTTP 200. Leaderboard returned 403 for the dummy account; real-account success remains unverified.** Vulkan and cape animation passed under Wine/software Vulkan. Native Windows GPU testing, complete authenticated native sessions, arbitrary dynamic attach, native debugger support, and the HTTP Toolkit application itself remain unverified.
 
-```sh
-python tests/test_cape.py
-python tests/test_cape_highres.py
-```
+## Start here
 
-These use installed Chromium at `/usr/bin/chromium`. Adjust the executable path
-for another system. Add `--live` to exercise a running editor at port 6969. Live
-tests **write and reset cosmetics in the connected instance**; use a dedicated
-test profile. They are not intended for a personal production instance.
+- [Current architecture, contents, validation, limits and next work](docs/HANDOFF.md)
+- [Rebuild with published native input or compile the native DLL](docs/BUILD.md)
+- [Exact final JAR layout](docs/jar-layout.md)
+- [Editor source, real GIF processing and resolution behavior](editor/README.md)
+- [Resolver, debugging and certificate/TLS findings](docs/BOOTSTRAP-AND-DEBUGGING.md)
+- [Windows Vulkan repair](docs/GRAPHICS-CRASH.md)
+- [Consolidation and preserved native ABI](docs/HELPER-CONSOLIDATION.md)
+- [Proxy/interception setup](tests/network/README.md)
+- [Current evidence](docs/evidence/current/README.md)
+- [Historical experiments, regressions and corrections](docs/history/FINDINGS.md)
+- [Cloud/Wine workspace details](docs/ENVIRONMENT.md)
 
-The site itself returned HTTP 403. The UI was reconstructed from supplied saved
-pages, modules, and screenshots; full live-site parity is not claimed. Startup
-Java-agent loading was verified. Dynamic attachment, JDWP, native debugging, and
-HTTP Toolkit interception are not yet verified. Certificate pinning and native
-anti-debug protections have **not** been removed.
+The supplied input was already modified; pristine vendor provenance is not established. The **155,936-record bootstrap table remains required**. No original resolver algorithm was reconstructed, and credentials/authentication were not fabricated to hide the menu regression.
+
+![Live local cape preview](docs/screenshots/cape-preview-live.png)

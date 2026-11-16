@@ -1,0 +1,66 @@
+{
+  "url": "https://storage.to/jZYkQzjYt",
+  "filename": "Nebula-Windows-direct.jar",
+  "size": 192425795,
+  "expires_at": "2026-11-23T13:50:47+00:00",
+  "id": "jZYkQzjYt",
+  "sha256": "0f34574ebbe06259cabb04e3cf8918d7cedc7bc1a6aa8bc9d10b2523d41d2f93",
+  "native_files_identical_to_working_pre_layout": true,
+  "key_class_byte_identical_to_working_pre_layout": true,
+  "restored_native_class_names": [
+    "zip.nebula.loader.Loader",
+    "zip.nebula.loader.Key"
+  ],
+  "changed_same_path_entries": [
+    "zip/nebula/client/IlllIIIIIIlllIIIllIlIIllllIllllllIlllIllIlllIIllIIIIlllllIlIllIl.class",
+    "zip/nebula/loader/Loader.class",
+    "org/jetbrains/skiko/LibraryLoader.class",
+    "fabric.mod.json"
+  ],
+  "new_helper_classes": 0,
+  "native_lookup_redirects_removed": true,
+  "original_bootstrap_table_retained": true,
+  "api_regression_test": {
+    "fixed_requests": [
+      {
+        "event": "http_request",
+        "host": "api.nebulaclient.net",
+        "route_category": "leaderboard",
+        "status": null,
+        "authorization_present": true
+      },
+      {
+        "event": "http_request",
+        "host": "api.nebulaclient.net",
+        "route_category": "changelog",
+        "status": null,
+        "authorization_present": true
+      },
+      {
+        "event": "http_response",
+        "host": "api.nebulaclient.net",
+        "route_category": "leaderboard",
+        "status": 403,
+        "authorization_present": null
+      },
+      {
+        "event": "http_response",
+        "host": "api.nebulaclient.net",
+        "route_category": "changelog",
+        "status": 200,
+        "authorization_present": null
+      }
+    ],
+    "broken_layout_menu_requests": [],
+    "same_proxy_and_test_account": true,
+    "no_secret_values_recorded": true,
+    "leaderboard_real_account_verified": false
+  },
+  "vulkan_test": "PASS: Windows JDK25/Wine, Mesa llvmpipe",
+  "cape_animation_test": "PASS: 15 frames; zero unchanged-state reads or texture replacement over10seconds",
+  "jdwp_test": "PASS",
+  "http_toolkit_itself_tested": false,
+  "native_authenticated_session_verified": false,
+  "github_release": "https://github.com/WatchSteinsGate/freebubu/releases/tag/handoff-2026-11-16-auth-compatibility",
+  "github_artifact": "https://media.githubusercontent.com/media/WatchSteinsGate/freebubu/handoff-2026-11-16-auth-compatibility/artifacts/Nebula-Windows-direct.jar"
+}

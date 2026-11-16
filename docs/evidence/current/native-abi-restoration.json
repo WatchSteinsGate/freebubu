@@ -1,0 +1,18 @@
+{
+  "sha256": "0f34574ebbe06259cabb04e3cf8918d7cedc7bc1a6aa8bc9d10b2523d41d2f93",
+  "native_files_identical_to_working_pre_layout": true,
+  "key_class_byte_identical_to_working_pre_layout": true,
+  "restored_native_class_names": [
+    "zip.nebula.loader.Loader",
+    "zip.nebula.loader.Key"
+  ],
+  "changed_same_path_entries": [
+    "zip/nebula/client/IlllIIIIIIlllIIIllIlIIllllIllllllIlllIllIlllIIllIIIIlllllIlIllIl.class",
+    "zip/nebula/loader/Loader.class",
+    "org/jetbrains/skiko/LibraryLoader.class",
+    "fabric.mod.json"
+  ],
+  "new_helper_classes": 0,
+  "native_lookup_redirects_removed": true,
+  "original_bootstrap_table_retained": true
+}

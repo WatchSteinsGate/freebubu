@@ -1,0 +1,28 @@
+{
+  "sha256": "0f34574ebbe06259cabb04e3cf8918d7cedc7bc1a6aa8bc9d10b2523d41d2f93",
+  "entries": 20263,
+  "class_files": 19590,
+  "entries_by_root": {
+    "META-INF": 182,
+    "OSGI-INF": 1,
+    "androidx": 8945,
+    "assets": 464,
+    "com": 1353,
+    "dev": 1050,
+    "fabric.mod.json": 1,
+    "io": 1976,
+    "it": 265,
+    "kotlinx": 7,
+    "lib": 2,
+    "me": 19,
+    "nebula.mixins.json": 1,
+    "nebulaclient.json": 1,
+    "net": 2,
+    "okhttp3": 384,
+    "okio": 121,
+    "org": 960,
+    "profiles": 1,
+    "thatonecatgif": 14,
+    "zip": 4514
+  }
+}

@@ -1,0 +1,40 @@
+import{r as e}from"./B0Z9INg1.js";import{Ht as t,J as n,b as r,ct as i,ft as a,g as o,k as s,mt as c,tt as l,vn as u}from"./DAji9eeE.js";import{A as d,B as f,C as p,D as m,E as h,F as g,G as _,H as v,I as y,L as b,M as x,N as S,O as C,R as w,T,_ as E,a as D,b as O,c as k,d as A,f as j,g as M,h as N,j as P,k as F,l as I,m as L,o as R,p as z,s as B,u as V,w as H,x as U,y as W,z as G}from"./CcV2bqHg.js";function K(e,t,n){var r=null,i=E(!0),a=null,o=L,s=null,c=M(l);e=typeof e==`function`?e:e===void 0?j:E(+e),t=typeof t==`function`?t:E(t===void 0?0:+t),n=typeof n==`function`?n:n===void 0?z:E(+n);function l(l){var u,d,f,p=(l=N(l)).length,m,h=!1,g,_=Array(p),v=Array(p);for(a??(s=o(g=c())),u=0;u<=p;++u){if(!(u<p&&i(m=l[u],u,l))===h){if(h=!h)d=u,s.areaStart(),s.lineStart();else{for(s.lineEnd(),s.lineStart(),f=u-1;f>=d;--f)s.point(_[f],v[f]);s.lineEnd(),s.areaEnd()}}h&&(_[u]=+e(m,u,l),v[u]=+t(m,u,l),s.point(r?+r(m,u,l):_[u],n?+n(m,u,l):v[u]))}if(g)return s=null,g+``||null}function u(){return A().defined(i).curve(o).context(a)}return l.x=function(t){return arguments.length?(e=typeof t==`function`?t:E(+t),r=null,l):e},l.x0=function(t){return arguments.length?(e=typeof t==`function`?t:E(+t),l):e},l.x1=function(e){return arguments.length?(r=e==null?null:typeof e==`function`?e:E(+e),l):r},l.y=function(e){return arguments.length?(t=typeof e==`function`?e:E(+e),n=null,l):t},l.y0=function(e){return arguments.length?(t=typeof e==`function`?e:E(+e),l):t},l.y1=function(e){return arguments.length?(n=e==null?null:typeof e==`function`?e:E(+e),l):n},l.lineX0=l.lineY0=function(){return u().x(e).y(t)},l.lineY1=function(){return u().x(e).y(n)},l.lineX1=function(){return u().x(r).y(t)},l.defined=function(e){return arguments.length?(i=typeof e==`function`?e:E(!!e),l):i},l.curve=function(e){return arguments.length?(o=e,a!=null&&(s=o(a)),l):o},l.context=function(e){return arguments.length?(e==null?a=s=null:s=o(a=e),l):a},l}var q={...O,color:void 0,curveType:I.MonotoneX,baseline:()=>0,opacity:1,cursor:null,line:!1,lineColor:void 0,lineWidth:2,lineDashArray:void 0,minHeight1Px:!1,minHeight:void 0,stackMinHeight:!1},J=e({area:()=>X,areaLinePath:()=>Z,globalStyles:()=>ee,root:()=>Y}),Y=d`
+  label: area-component;
+`,ee=P`
+  :root {
+    --vis-area-cursor: default;
+    --vis-area-fill-opacity: 1;
+    --vis-area-stroke-color: none;
+    --vis-area-stroke-width: 0px;
+    --vis-area-stroke-dasharray: none;
+    --vis-area-stroke-opacity: 1;
+    --vis-area-hover-fill-opacity: none;
+    --vis-area-hover-stroke-width: none;
+
+    /* Dark Theme */
+    --vis-dark-area-stroke-color: none;
+  }
+
+  ${F} ${`.${Y}`} {
+    --vis-area-stroke-color: var(--vis-dark-area-stroke-color);
+  }
+
+`,X=d`
+  label: area;
+  cursor: var(--vis-area-cursor);
+  fill-opacity: var(--vis-area-fill-opacity);
+  stroke-width: var(--vis-area-stroke-width);
+  stroke-dasharray: var(--vis-area-stroke-dasharray);
+  stroke: var(--vis-area-stroke-color);
+  stroke-opacity: var(--vis-area-stroke-opacity);
+
+  &:hover {
+    fill-opacity: var(--vis-area-hover-fill-opacity);
+    stroke-width: var(--vis-area-hover-stroke-width);
+  }
+`,Z=d`
+  label: areaLinePath;
+  fill: none;
+  stroke-dasharray: var(--vis-line-stroke-dasharray);
+  stroke-dashoffset: var(--vis-line-stroke-dashoffset);
+`,Q=class e extends W{constructor(t){super(),this._defaultConfig=q,this.config=this._defaultConfig,this.stacked=!0,this.events={[e.selectors.area]:{}},this.setConfig(t),this.stacked=Array.isArray(this.config.y)}get bleed(){let{config:{line:e,lineWidth:t}}=this;if(!e)return{top:0,bottom:0,left:0,right:0};let n=this.yScale.domain(),r=(this.yScale.range()[0]>this.yScale.range()[1]?U.North:U.South)===U.South,i=t>3,a=t>=10;return{top:!a&&(!r&&n[1]===0||r&&n[0]===0)?0:t/2,bottom:!a&&(!r&&n[0]===0||r&&n[1]===0)?0:t/2,left:i?t/2:0,right:i?t/2:0}}_render(e){super._render(e);let{config:t,datamodel:{data:n}}=this,r=v(e)?e:t.duration,i={colorFn:this._colorFunction},a=k[t.curveType];this._areaGen=K().x(e=>e.x).y0(e=>e.y0).y1(e=>e.y1).curve(a);let o=f(t.y)?t.y:[t.y],s=n.map((e,n)=>this.xScale(g(e,t.x,n))),c=y(n,t.baseline,o,this._prevNegative);this._prevNegative=c.map(e=>!!e.isMostlyNegative);let l=this.yScale.range(),u=Math.min(l[0],l[1]),d=Math.max(l[0],l[1]),h=[],b=c.map(e=>e.map((e,n)=>{let r=s[n],i=x(this.yScale(e[0]),u,d),a=x(this.yScale(e[1]),u,d),o=a>i,c=t.stackMinHeight&&h[n]||0,l=o?i+c:i-c,f=o?a+c:a-c,p=0;return(t.minHeight||t.minHeight1Px)&&Math.abs(f-l)<(t.minHeight??1)&&(p=(t.minHeight??1)-Math.abs(f-l),t.stackMinHeight&&(h[n]=c+p)),{x:r,y0:l,y1:o?f+p:f-p}})),S=b.length-1,E=[...b].reverse(),D=this.g.selectAll(`.${X}`).data(E),O=D.enter().append(`path`).attr(`class`,X).attr(`d`,e=>this._areaGen(e)||this._emptyPath()).attr(H,(e,t)=>S-t).style(`opacity`,0).style(`fill`,(e,r)=>C(n,t.color,S-r,t.colorKeys?.[S-r],i)).style(`mask`,(e,r)=>T(m(n,t.pattern,S-r))),A=p(O.merge(D),r).style(`opacity`,(e,r)=>e.some(e=>e.y0-e.y1!==0)?g(n,t.opacity,S-r):0).style(`fill`,(e,r)=>C(n,t.color,S-r,t.colorKeys?.[S-r],i)).style(`mask`,(e,r)=>T(m(n,t.pattern,S-r))).style(`cursor`,(e,r)=>w(n,t.cursor,S-r));r?A.attrTween(`d`,(e,t,n)=>{let r=_(n[t]).attr(`d`),i=this._areaGen(e)||this._emptyPath();return V(r,i)}):A.attr(`d`,e=>this._areaGen(e)||this._emptyPath()),p(D.exit(),r).style(`opacity`,0).remove(),this._renderLines(r,t.line?b:[])}_renderLines(e,t){let{config:n,datamodel:{data:r}}=this,i={colorFn:this._colorFunction},a=t.length-1,o=[...t].reverse(),s=n.lineColor??n.color,c=this.g.selectAll(`.${Z}`).data(o),l=this.g.selectAll(`.${X}`).nodes(),u=e=>C(r,s,a-e,n.colorKeys?.[a-e],i),d=(e,t)=>h(m(r,n.linePattern,a-e),u(e),t),f=e=>G(r,n.lineDashArray,e)?.join(` `)??d(e)?.dashArray??null,g=c.enter().insert(`path`,(e,t)=>l[t+1]).attr(`class`,Z).attr(H,(e,t)=>a-t).attr(`stroke`,(e,t)=>u(t)).attr(`stroke-width`,n.lineWidth).attr(`stroke-opacity`,0).style(`marker`,function(e,t){return d(t,this)?.marker??null}),v=p(g.merge(c),e).attr(`stroke`,(e,t)=>u(t)).attr(`stroke-width`,n.lineWidth).attr(`stroke-opacity`,1).attr(`cursor`,(e,t)=>w(r,n.cursor,a-t)).style(`marker`,(e,t,n)=>d(t,n[t])?.marker??null).style(`stroke-dasharray`,(e,t)=>f(t)),y=k[n.curveType];this._lineGen=A().x(e=>e.x).y(e=>e.y1).curve(y),e?v.attrTween(`d`,(e,t,n)=>{let r=_(n[t]).attr(`d`)||this._emptyLinePath(),i=this._lineGen(e)||this._emptyLinePath();return V(r,i)}):v.attr(`d`,e=>this._lineGen(e)||this._emptyLinePath()),p(c.exit(),e).style(`opacity`,0).remove()}getYDataExtent(e){let{config:t,datamodel:n}=this,r=f(t.y)?t.y:[t.y],i=this.xScale.domain(),a=e?S(n.data,i,t.x,!0):n.data;return b(a,t.baseline,...r)}_emptyPath(){let e=this.xScale.range(),t=this.yScale.domain(),n=this.yScale((t[0]+t[1])/2),r=n;return this._areaGen([{y0:n,y1:r,x:e[0]},{y0:n,y1:r,x:e[1]}])}_emptyLinePath(){let e=this.xScale.range(),t=this.yScale.range();return`M${e[0]},${t[0]} L${e[1]},${t[0]}`}};Q.selectors=J;var $=Q,te={"data-vis-component":``};$.selectors;var ne=s({__name:`index`,props:{color:{type:[Function,String,Array,null]},pattern:{type:[Function,null]},curveType:{},baseline:{type:[Function,Number,null]},opacity:{type:[Function,Number,null]},cursor:{type:[Function,String,null]},line:{type:Boolean},lineColor:{type:[Function,String,Array,null]},lineWidth:{},lineDashArray:{type:[Function,Array,null]},linePattern:{type:[Function,null]},minHeight1Px:{type:Boolean},minHeight:{},stackMinHeight:{type:Boolean},x:{type:[Function,Number,null]},y:{type:[Function,Number,null,Array]},id:{type:Function},colorKeys:{},xScale:{type:[Object,Function]},yScale:{type:[Object,Function]},excludeFromDomainCalculation:{type:Boolean},duration:{},events:{},attributes:{},data:{}},setup(e,{expose:s}){let d=e,f=n(B),p=o(()=>f.data.value??d.data),m=D(d),h=u();return i(()=>{l(()=>{h.value=new $(m.value),h.value?.setData(p.value),f.update(h.value)})}),a(()=>{h.value?.destroy(),f.destroy()}),t(m,(e,t)=>{R(e,t)||(h.value?.setConfig(m.value),h.value?.render())}),t(p,()=>{h.value?.setData(p.value)}),s({component:h}),(e,t)=>(c(),r(`div`,te))}});export{ne as t};
