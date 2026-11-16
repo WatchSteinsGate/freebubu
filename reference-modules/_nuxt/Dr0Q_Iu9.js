@@ -1,0 +1,1 @@
+import{c as e,o as t}from"./M4jph186.js";import{k as n}from"#entry";var r=t((t,r)=>{let{loggedIn:i}=n();if(i.value)return e(`/profile`)});export{r as default};

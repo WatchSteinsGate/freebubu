@@ -1,0 +1,838 @@
+{
+  "mods": [
+    {
+      "path": "mods/fabric-api-0.161.0+26.2.jar",
+      "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/ewUK83HI/fabric-api-0.161.0%2B26.2.jar",
+      "sha256": "e5b858ceb13290c274e31cb888ff5a1a40cb91067e7ffab0b5b775aec51e216a"
+    },
+    {
+      "path": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "url": "https://cdn.modrinth.com/data/Ha28R6CL/versions/SKW1BTL3/fabric-language-kotlin-1.14.2%2Bkotlin.2.4.21.jar",
+      "sha256": "fbdbf5286ab9d65fedb49e6e01c15e338ae303eb7b9d8c7423d0a9bcfe526ef9"
+    }
+  ],
+  "classpath": [
+    {
+      "path": "jars/221ddba7ff60-fabric-advancement-api-v1-1.0.0+58719a3b9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-advancement-api-v1-1.0.0+58719a3b9e.jar",
+      "sha256": "221ddba7ff60ac669394e04edfaeae21d60844a2c093ec4929539e20403a6222"
+    },
+    {
+      "path": "jars/dd335d64ec99-fabric-object-builder-api-v1-24.1.1+6fcd5f039e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-object-builder-api-v1-24.1.1+6fcd5f039e.jar",
+      "sha256": "dd335d64ec99b68ee64c661287058e307593a9352e8590205fa2c951e7ebecb5"
+    },
+    {
+      "path": "jars/9c62b5b85e90-fabric-resource-loader-v0-3.3.20+4fc5413f9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-resource-loader-v0-3.3.20+4fc5413f9e.jar",
+      "sha256": "9c62b5b85e903a07542ed4825890afb70fe533795e791dc6515a9484f8221654"
+    },
+    {
+      "path": "jars/d4669cb34e15-fabric-data-attachment-api-v1-2.2.19+515ac5339e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-data-attachment-api-v1-2.2.19+515ac5339e.jar",
+      "sha256": "d4669cb34e150e023018fca95ebdc0cbb3a829895df63f6f652d1ae8c62e2840"
+    },
+    {
+      "path": "jars/97b2f8537b3a-kotlin-stdlib-jdk7-2.4.21.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlin-stdlib-jdk7-2.4.21.jar",
+      "sha256": "97b2f8537b3ae83dfb8a93f0e1ce3b237f2999c7c4b7b0b35083a7b2bfd8017c"
+    },
+    {
+      "path": "jars/28cf54bf6dc8-kotlinx-datetime-jvm-0.8.0.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlinx-datetime-jvm-0.8.0.jar",
+      "sha256": "28cf54bf6dc8fd304249fea4b33ae10855e65fb4ef007c5acbbcf3dfa72f549e"
+    },
+    {
+      "path": "jars/10b88a11d0c5-fabric-networking-api-v1-6.3.4+2989c6a09e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-networking-api-v1-6.3.4+2989c6a09e.jar",
+      "sha256": "10b88a11d0c534810bee2ce10b3e70482200f20ba92f1fa5457ce81b6649b923"
+    },
+    {
+      "path": "jars/3fdb571624f6-fabric-model-loading-api-v1-8.0.17+c80601bb9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-model-loading-api-v1-8.0.17+c80601bb9e.jar",
+      "sha256": "3fdb571624f6b5cde0085efa29e59f95aa828ade504c93016d13c69eb7605cff"
+    },
+    {
+      "path": "jars/cb0996e2d4f9-kotlinx-serialization-cbor-jvm-1.11.0.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlinx-serialization-cbor-jvm-1.11.0.jar",
+      "sha256": "cb0996e2d4f908c4ec8d26c768dc2276308cb164b84e41d0c95ec7a3930cd4f6"
+    },
+    {
+      "path": "jars/546e5dc5f364-fabric-transfer-api-v1-8.0.13+11dbb7d79e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-transfer-api-v1-8.0.13+11dbb7d79e.jar",
+      "sha256": "546e5dc5f364c65a9f1f011d589514b9807059d107fb55fccc13dd377bf88c26"
+    },
+    {
+      "path": "jars/aeb638538fb2-fabric-sound-api-v1-2.0.5+11a26f319e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-sound-api-v1-2.0.5+11a26f319e.jar",
+      "sha256": "aeb638538fb25e2b442cf2dfa41231de14600c2e9599ddc57d2bffa235c4d699"
+    },
+    {
+      "path": "jars/caf1be7dbc73-fabric-renderer-api-v1-14.1.4+2b0d8a229e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-renderer-api-v1-14.1.4+2b0d8a229e.jar",
+      "sha256": "caf1be7dbc73479618c689d3f2161f500822e4a0ebffd9b3836641e1874f2b0e"
+    },
+    {
+      "path": "jars/d9912622f0ae-fabric-entity-events-v1-5.0.5+06488ac19e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-entity-events-v1-5.0.5+06488ac19e.jar",
+      "sha256": "d9912622f0ae615ec4df8aada79309b0b52dbade87cf70a7be21536cfc1fc916"
+    },
+    {
+      "path": "jars/8d1aa1e30aeb-fabric-transitive-access-wideners-v1-8.1.4+67c847259e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-transitive-access-wideners-v1-8.1.4+67c847259e.jar",
+      "sha256": "8d1aa1e30aebf6acb255bd93f1fcac897331068b61ce1ca11f34a4102996210a"
+    },
+    {
+      "path": "jars/074dc670b3d8-fabric-item-api-v1-14.5.0+c68f6cbe9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-item-api-v1-14.5.0+c68f6cbe9e.jar",
+      "sha256": "074dc670b3d862345f3b7823d47ad0b0fa559c04760a353673d7f36c29a4957e"
+    },
+    {
+      "path": "jars/690696148575-fabric-debug-api-v1-1.0.2+c792624d9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-debug-api-v1-1.0.2+c792624d9e.jar",
+      "sha256": "6906961485754447aa5cf149fc42e4eae55f7b977c132d8e9bc98f3a7d22029a"
+    },
+    {
+      "path": "jars/19cea12aafe1-kotlin-stdlib-jdk8-2.4.21.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlin-stdlib-jdk8-2.4.21.jar",
+      "sha256": "19cea12aafe1e86dd9e211e4a3dc7b995b83369fd9c4421f162603fc069f3cf4"
+    },
+    {
+      "path": "jars/91679a213120-fabric-api-base-2.0.4+ece063239e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-api-base-2.0.4+ece063239e.jar",
+      "sha256": "91679a213120ca9fe8681461f4e9ff65f296a80a844d50c7dfc2113787b8b41a"
+    },
+    {
+      "path": "jars/14f5a46b344a-kotlinx-coroutines-core-jvm-1.11.0.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlinx-coroutines-core-jvm-1.11.0.jar",
+      "sha256": "14f5a46b344ab7420d35ed618ed0a483687d57b23470722b6568f1b643f001f3"
+    },
+    {
+      "path": "jars/2adc42c9e107-fabric-events-interaction-v0-5.2.8+515ac5339e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-events-interaction-v0-5.2.8+515ac5339e.jar",
+      "sha256": "2adc42c9e1072dedd0eabcfd9e6a858cbab451cdfc9bf8ff195f3403add7bda2"
+    },
+    {
+      "path": "jars/392935f1e49d-fabric-rendering-fluids-v1-6.0.4+06488ac19e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-rendering-fluids-v1-6.0.4+06488ac19e.jar",
+      "sha256": "392935f1e49d5c52e94556046b42566bcc39637274b35c19b4be79371a69c593"
+    },
+    {
+      "path": "jars/be7eb4279375-fabric-biome-api-v1-18.0.6+c7bd5b8e9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-biome-api-v1-18.0.6+c7bd5b8e9e.jar",
+      "sha256": "be7eb427937567cebbebb08921c9bd9108632ef30c3596f0a8cc05401c028311"
+    },
+    {
+      "path": "jars/6f1b81c71bdf-fabric-menu-api-v1-2.0.17+086d547a9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-menu-api-v1-2.0.17+086d547a9e.jar",
+      "sha256": "6f1b81c71bdf4e5fc2fb2485f127d537fd1d6ec8fa2ad507e773310f1cfe7161"
+    },
+    {
+      "path": "jars/ddfce65cad99-fabric-convention-tags-v2-4.7.1+1f023a9e9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-convention-tags-v2-4.7.1+1f023a9e9e.jar",
+      "sha256": "ddfce65cad99011b13a993714f8f07aeb8a964a73ddbd09139c5857152d2313d"
+    },
+    {
+      "path": "jars/244106ce1103-fabric-game-rule-api-v1-4.0.8+46a6d00c9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-game-rule-api-v1-4.0.8+46a6d00c9e.jar",
+      "sha256": "244106ce11032eba15485c6e84a866ab974707420baa956d16e87e41914c9896"
+    },
+    {
+      "path": "jars/0bf94ce05874-fabric-screen-api-v1-5.2.1+5087f8249e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-screen-api-v1-5.2.1+5087f8249e.jar",
+      "sha256": "0bf94ce0587497d3fca425c5bbd82b22836a77b49f717ddc507b943677f0fa36"
+    },
+    {
+      "path": "jars/cba8c892c9f2-fabric-lifecycle-events-v1-4.1.4+29b6eb019e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-lifecycle-events-v1-4.1.4+29b6eb019e.jar",
+      "sha256": "cba8c892c9f203aaac8441da7cd800510097120610dc69557592f2b1dcab9d8a"
+    },
+    {
+      "path": "jars/38da6c1a9aa4-kotlinx-io-core-jvm-0.9.1.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlinx-io-core-jvm-0.9.1.jar",
+      "sha256": "38da6c1a9aa4c9210bf2b83e2e1e6ebc2ba51c5db5d81b85eb2334ffd923407a"
+    },
+    {
+      "path": "jars/61222d6d12fd-kotlinx-serialization-core-jvm-1.11.0.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlinx-serialization-core-jvm-1.11.0.jar",
+      "sha256": "61222d6d12fd1529db2bb810ce5bc8a222ea3371c98a556345c2fd258798baac"
+    },
+    {
+      "path": "jars/e28c594da6e8-fabric-message-api-v1-7.0.8+bb2ed3f79e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-message-api-v1-7.0.8+bb2ed3f79e.jar",
+      "sha256": "e28c594da6e871328c84e5d597d3e99cac3745acf23179924e97229ad574d26f"
+    },
+    {
+      "path": "jars/9a3b476ffce2-fabric-recipe-api-v1-9.0.22+11e1c9a39e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-recipe-api-v1-9.0.22+11e1c9a39e.jar",
+      "sha256": "9a3b476ffce2f9a9c05dcae50ed8aa5448d23de746483bfdff82f534de95f7df"
+    },
+    {
+      "path": "jars/843dd749ff32-atomicfu-jvm-0.33.0.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/atomicfu-jvm-0.33.0.jar",
+      "sha256": "843dd749ff32112956dba51a57923ad995900665d058cb9c90d44cbeace7dcdb"
+    },
+    {
+      "path": "jars/efd646cae9ac-kotlin-stdlib-2.4.21.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlin-stdlib-2.4.21.jar",
+      "sha256": "efd646cae9ac0d11f5f24a65310b5d421747073b1fbd6b59ab12f5c4234d8d3e"
+    },
+    {
+      "path": "jars/66cbf2a36caa-fabric-key-mapping-api-v1-2.0.5+e2bdee789e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-key-mapping-api-v1-2.0.5+e2bdee789e.jar",
+      "sha256": "66cbf2a36caa5202e1d9776c0833aea2ddadf14bfc40053fd2c4685c69272f8f"
+    },
+    {
+      "path": "jars/8bd58904a358-fabric-loot-api-v3-3.0.17+06488ac19e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-loot-api-v3-3.0.17+06488ac19e.jar",
+      "sha256": "8bd58904a3582e3ccbe41b533cc7a50b6734ead684a02e41f6546a93994b6ecd"
+    },
+    {
+      "path": "jars/b09397e9bbdc-fabric-dimensions-v1-5.1.12+515ac5339e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-dimensions-v1-5.1.12+515ac5339e.jar",
+      "sha256": "b09397e9bbdcb8bd5cc1384400ae4dc7076a858d42ce39def2d0d326be13d56c"
+    },
+    {
+      "path": "jars/b126dbac5cfc-fabric-creative-tab-api-v1-5.0.15+6468574f9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-creative-tab-api-v1-5.0.15+6468574f9e.jar",
+      "sha256": "b126dbac5cfc4b07568609089c23eaeb1e9dc968e9c04a336e2995a12df3d7ba"
+    },
+    {
+      "path": "jars/1dfe5f51dc61-fabric-block-getter-api-v2-2.0.7+ec56b6019e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-block-getter-api-v2-2.0.7+ec56b6019e.jar",
+      "sha256": "1dfe5f51dc614910bdf419dab2ac73c46d10fb7f29cfb21b49263333bb149749"
+    },
+    {
+      "path": "jars/a0825a89eb44-fabric-resource-loader-v1-2.0.13+9edec1269e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-resource-loader-v1-2.0.13+9edec1269e.jar",
+      "sha256": "a0825a89eb44f9bd1ac7e237757adb230dc31d4202ccf5c638aa22376befb738"
+    },
+    {
+      "path": "jars/319e6bad3a47-fabric-api-lookup-api-v1-2.0.18+11e1c9a39e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-api-lookup-api-v1-2.0.18+11e1c9a39e.jar",
+      "sha256": "319e6bad3a47ba64a3df19e460a029cc21ae23ab47f4703693edcc0aa0a9906a"
+    },
+    {
+      "path": "jars/ee92b7cf1895-fabric-renderer-indigo-9.1.4+2b0d8a229e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-renderer-indigo-9.1.4+2b0d8a229e.jar",
+      "sha256": "ee92b7cf1895f5eabe95ed288afe531a9b3a941713b340020482b41977115dea"
+    },
+    {
+      "path": "jars/1e7ad0db5cf0-fabric-content-registries-v0-11.3.2+37b1aa249e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-content-registries-v0-11.3.2+37b1aa249e.jar",
+      "sha256": "1e7ad0db5cf0ca5ffa505185ccd94fdbc29573ed85cf157a3514eb4f60d7d986"
+    },
+    {
+      "path": "jars/d334ff3af4e6-fabric-permission-api-v1-1.0.5+e442d8d09e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-permission-api-v1-1.0.5+e442d8d09e.jar",
+      "sha256": "d334ff3af4e641255d444558e847f68dfb923fcc5d5c5c9cfbd5d25310e3fefb"
+    },
+    {
+      "path": "jars/8e5eae826343-fabric-tag-api-v1-2.1.4+515ac5339e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-tag-api-v1-2.1.4+515ac5339e.jar",
+      "sha256": "8e5eae826343acac61219de8b0077b2180c35dd34301f32b3bc107efc8965207"
+    },
+    {
+      "path": "jars/bedf189c0fc5-fabric-resource-conditions-api-v1-6.1.0+10e9a28b9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-resource-conditions-api-v1-6.1.0+10e9a28b9e.jar",
+      "sha256": "bedf189c0fc5a1314efab58ec1b168f236740ddfcfe54f766aa204a260f369b8"
+    },
+    {
+      "path": "jars/4c0d4b6e81b8-fabric-registry-sync-v0-7.1.1+c7bd5b8e9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-registry-sync-v0-7.1.1+c7bd5b8e9e.jar",
+      "sha256": "4c0d4b6e81b872ac63396d99ebb45bc83ce955c1234e55d53e744a26cde4df9c"
+    },
+    {
+      "path": "jars/74db9db9e131-fabric-block-api-v1-3.1.0+53515aab9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-block-api-v1-3.1.0+53515aab9e.jar",
+      "sha256": "74db9db9e1315231598c1e6bbaba1f4f8fcb85a329253c4771b6b19a68b28a0c"
+    },
+    {
+      "path": "jars/2a5f2fa5c405-kotlinx-io-bytestring-jvm-0.9.1.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlinx-io-bytestring-jvm-0.9.1.jar",
+      "sha256": "2a5f2fa5c405189e38b2bdc287fc4e5661e4c6ec0ad50883e10af9fb2a401512"
+    },
+    {
+      "path": "jars/bfe2d8d7c5b4-fabric-serialization-api-v1-2.0.4+11a26f319e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-serialization-api-v1-2.0.4+11a26f319e.jar",
+      "sha256": "bfe2d8d7c5b4120ddb0b0598857deb2fc875d47633c33ffca8fe394ca5063e0e"
+    },
+    {
+      "path": "jars/180d58cac512-kotlinx-coroutines-jdk8-1.11.0.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlinx-coroutines-jdk8-1.11.0.jar",
+      "sha256": "180d58cac512a1a3003b2f11085a81636792dc13fcf0b4859e6f502a93ab9ded"
+    },
+    {
+      "path": "jars/2fb8820ea89d-fabric-particles-v1-5.0.19+d1756aa99e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-particles-v1-5.0.19+d1756aa99e.jar",
+      "sha256": "2fb8820ea89d5821d12baa2c95633098f083a49614bf292001478d80100cc806"
+    },
+    {
+      "path": "jars/d8c17e57d942-fabric-crash-report-info-v1-1.0.5+086d547a9e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-crash-report-info-v1-1.0.5+086d547a9e.jar",
+      "sha256": "d8c17e57d942b44b0fb8fbb56bb963b280c9b89fdc5bbfaa12975912bfea2080"
+    },
+    {
+      "path": "jars/857c428b1481-fabric-data-generation-api-v1-25.6.0+c0da0b829e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-data-generation-api-v1-25.6.0+c0da0b829e.jar",
+      "sha256": "857c428b1481af2d29b05a7c0e1840a14fb3fc37e6317e669c43f45f36a9e6ff"
+    },
+    {
+      "path": "jars/008f9f7a3a4a-fabric-command-api-v2-3.1.0+00cb03469e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-command-api-v2-3.1.0+00cb03469e.jar",
+      "sha256": "008f9f7a3a4af755ce8272ba623a20d94ef5ccca870fcfd37f25be899a65f64a"
+    },
+    {
+      "path": "jars/a7f887050036-kotlinx-serialization-json-jvm-1.11.0.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlinx-serialization-json-jvm-1.11.0.jar",
+      "sha256": "a7f8870500369a34fc817965d79866f19934cddf7975d221e348f12bb377824e"
+    },
+    {
+      "path": "jars/4aa6eef69e4d-kotlin-reflect-2.4.21.jar",
+      "archive": "mods/fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar",
+      "entry": "META-INF/jars/kotlin-reflect-2.4.21.jar",
+      "sha256": "4aa6eef69e4da42b125de296532b8f720ef9742e75bc48da4359a66cbdda15ac"
+    },
+    {
+      "path": "jars/13f4e84559e2-fabric-rendering-v1-25.3.3+515ac5339e.jar",
+      "archive": "mods/fabric-api-0.161.0+26.2.jar",
+      "entry": "META-INF/jars/fabric-rendering-v1-25.3.3+515ac5339e.jar",
+      "sha256": "13f4e84559e2fa7c1220c8aa12b1d6f3b5463692c8c1e8840b7b5e0a057b8a5c"
+    },
+    {
+      "path": "jars/a58a84c4271e-lz4-java-1.10.1.jar",
+      "url": "https://libraries.minecraft.net/at/yawk/lz4/lz4-java/1.10.1/lz4-java-1.10.1.jar",
+      "sha256": "a58a84c4271e50df4c96ed916ccb7e48a869f8ed9cdcda1ad5d3d4c33b0214a3"
+    },
+    {
+      "path": "jars/c50bc998cd1a-azure-json-1.4.0.jar",
+      "url": "https://libraries.minecraft.net/com/azure/azure-json/1.4.0/azure-json-1.4.0.jar",
+      "sha256": "c50bc998cd1a6c689f8644b51c206217bf2da09d5b949e777490a60290cc3a0d"
+    },
+    {
+      "path": "jars/b29ba9bce041-oshi-core-6.9.0.jar",
+      "url": "https://libraries.minecraft.net/com/github/oshi/oshi-core/6.9.0/oshi-core-6.9.0.jar",
+      "sha256": "b29ba9bce041e6ea822203d5b5a692660c87551241510ebc76eedffe684844c7"
+    },
+    {
+      "path": "jars/2cbd119bf196-gson-2.14.0.jar",
+      "url": "https://libraries.minecraft.net/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar",
+      "sha256": "2cbd119bf1961c28788310963dc80ba65f58cdeec1dd139c8bdb1240faa2c36f"
+    },
+    {
+      "path": "jars/cbfc3906b19b-failureaccess-1.0.3.jar",
+      "url": "https://libraries.minecraft.net/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar",
+      "sha256": "cbfc3906b19b8f55dd7cfd6dfe0aa4532e834250d7f080bd8d211a3e246b59cb"
+    },
+    {
+      "path": "jars/dc573e1fca4f-guava-33.6.0-jre.jar",
+      "url": "https://libraries.minecraft.net/com/google/guava/guava/33.6.0-jre/guava-33.6.0-jre.jar",
+      "sha256": "dc573e1fca4fd5454f4a5fd3d7da2df03002876a4175bafc14a95980dd7713b3"
+    },
+    {
+      "path": "jars/e962c1758d96-icu4j-78.3.jar",
+      "url": "https://libraries.minecraft.net/com/ibm/icu/icu4j/78.3/icu4j-78.3.jar",
+      "sha256": "e962c1758d9659ea1e1fbab99c58683f654d304e1126ace19aaabfe39e0edb25"
+    },
+    {
+      "path": "jars/12e62f79d1a7-msal4j-1.24.1.jar",
+      "url": "https://libraries.minecraft.net/com/microsoft/azure/msal4j/1.24.1/msal4j-1.24.1.jar",
+      "sha256": "12e62f79d1a71d176a41c168c0587f8167f0add99b78f006f39595bd7242aebe"
+    },
+    {
+      "path": "jars/1f77e7024054-authlib-9.0.75.jar",
+      "url": "https://libraries.minecraft.net/com/mojang/authlib/9.0.75/authlib-9.0.75.jar",
+      "sha256": "1f77e70240548b9cd233da0e12938bbbe5597ac9e94f6c6b07577faf1461a951"
+    },
+    {
+      "path": "jars/830bfd639c8d-blocklist-1.0.10.jar",
+      "url": "https://libraries.minecraft.net/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar",
+      "sha256": "830bfd639c8db49236bbd8e45d3a2b8c96c56ff654a10118654958a6235d4c44"
+    },
+    {
+      "path": "jars/c8ee4136e474-brigadier-1.3.10.jar",
+      "url": "https://libraries.minecraft.net/com/mojang/brigadier/1.3.10/brigadier-1.3.10.jar",
+      "sha256": "c8ee4136e474ac7723ca2b432ec8d1a2bc88ef7d1ec57c314ba9e33cdc83dd75"
+    },
+    {
+      "path": "jars/3547cb1da899-datafixerupper-10.0.21.jar",
+      "url": "https://libraries.minecraft.net/com/mojang/datafixerupper/10.0.21/datafixerupper-10.0.21.jar",
+      "sha256": "3547cb1da8993fb7ebd42494d0e78997d2cfbe90c421f5efd022863e6909941e"
+    },
+    {
+      "path": "jars/8bb68d0b65e8-jtracy-1.0.37.jar",
+      "url": "https://libraries.minecraft.net/com/mojang/jtracy/1.0.37/jtracy-1.0.37.jar",
+      "sha256": "8bb68d0b65e8eceb92de2bd1d9e1443a8c9a9dd1b5818a5e54870b0f8253672a"
+    },
+    {
+      "path": "jars/219c2aab0f14-jtracy-1.0.37-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/com/mojang/jtracy/1.0.37/jtracy-1.0.37-natives-windows.jar",
+      "sha256": "219c2aab0f1453901df8cd39886659dc5159a9c1139264c14f06baebf49b9730"
+    },
+    {
+      "path": "jars/3c7ac9742fa9-logging-1.7.12.jar",
+      "url": "https://libraries.minecraft.net/com/mojang/logging/1.7.12/logging-1.7.12.jar",
+      "sha256": "3c7ac9742fa98c773275379eb1046c048b5d2ee989152a8c69e7ba696c3f8538"
+    },
+    {
+      "path": "jars/16d70e7968b4-patchy-2.2.10.jar",
+      "url": "https://libraries.minecraft.net/com/mojang/patchy/2.2.10/patchy-2.2.10.jar",
+      "sha256": "16d70e7968b45caffc81576268eb000f473fb60bf257182d3447dea8ec919d5a"
+    },
+    {
+      "path": "jars/63769a6f662a-text2speech-1.19.12.jar",
+      "url": "https://libraries.minecraft.net/com/mojang/text2speech/1.19.12/text2speech-1.19.12.jar",
+      "sha256": "63769a6f662ad8943adf6be14a45e375d76a567d7ba50c2a7f1f95082c93b816"
+    },
+    {
+      "path": "jars/d164fe79f262-commons-codec-1.22.0.jar",
+      "url": "https://libraries.minecraft.net/commons-codec/commons-codec/1.22.0/commons-codec-1.22.0.jar",
+      "sha256": "d164fe79f262c32d9b18a0b5b2d317d1c27653d5e98fd2b998c24bf901c72ce4"
+    },
+    {
+      "path": "jars/df90bba0fe3c-commons-io-2.20.0.jar",
+      "url": "https://libraries.minecraft.net/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar",
+      "sha256": "df90bba0fe3cb586b7f164e78fe8f8f4da3f2dd5c27fa645f888100ccc25dd72"
+    },
+    {
+      "path": "jars/1361fd9c9ba8-netty-buffer-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-buffer/4.2.15.Final/netty-buffer-4.2.15.Final.jar",
+      "sha256": "1361fd9c9ba85b9831cf54a1b2e45ddc3ce34a768931726c099d3f5ef0efe4a3"
+    },
+    {
+      "path": "jars/2c6d39d72706-netty-codec-base-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-codec-base/4.2.15.Final/netty-codec-base-4.2.15.Final.jar",
+      "sha256": "2c6d39d7270628b8cfc3166fbd7a93d595958e59c461bc32ddb383c8c91bf811"
+    },
+    {
+      "path": "jars/4adaa5cdd4d2-netty-codec-compression-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-codec-compression/4.2.15.Final/netty-codec-compression-4.2.15.Final.jar",
+      "sha256": "4adaa5cdd4d2e9b50b23e4c3eff42e73de6eb40848718b3aa84cd5b454da6ce8"
+    },
+    {
+      "path": "jars/76ae57e87af3-netty-codec-http-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-codec-http/4.2.15.Final/netty-codec-http-4.2.15.Final.jar",
+      "sha256": "76ae57e87af37b3c4107140f50b9244b1456163a6a225510838f7c5a4458ec22"
+    },
+    {
+      "path": "jars/78206aa7f6d1-netty-common-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-common/4.2.15.Final/netty-common-4.2.15.Final.jar",
+      "sha256": "78206aa7f6d197caa926291408c01889b6b910ca0f74017d3fcbdaccf9562959"
+    },
+    {
+      "path": "jars/99b59e4bea72-netty-handler-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-handler/4.2.15.Final/netty-handler-4.2.15.Final.jar",
+      "sha256": "99b59e4bea72220d2aed52df8baf37d97431b06ade0b135226cdf73168975eab"
+    },
+    {
+      "path": "jars/24318497f2a3-netty-resolver-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-resolver/4.2.15.Final/netty-resolver-4.2.15.Final.jar",
+      "sha256": "24318497f2a3a645964fed418f48879ba11365cab8e1f8d66c47fa7da15ef19a"
+    },
+    {
+      "path": "jars/be509407fd71-netty-transport-classes-epoll-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-transport-classes-epoll/4.2.15.Final/netty-transport-classes-epoll-4.2.15.Final.jar",
+      "sha256": "be509407fd71a4b83378567c613420db544d659bb522df7b253a1dbe8ca297fe"
+    },
+    {
+      "path": "jars/2a15e2213a1f-netty-transport-classes-kqueue-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-transport-classes-kqueue/4.2.15.Final/netty-transport-classes-kqueue-4.2.15.Final.jar",
+      "sha256": "2a15e2213a1fe49e73b4bb39bc746e7196dba8c1b182bc0d21a719a4d1be2c00"
+    },
+    {
+      "path": "jars/b9ea9fc5ad5e-netty-transport-native-unix-common-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-transport-native-unix-common/4.2.15.Final/netty-transport-native-unix-common-4.2.15.Final.jar",
+      "sha256": "b9ea9fc5ad5eba04e99afdff75b2eb97b5ddfb2ad772e2f2ef5d8f277f3cbd76"
+    },
+    {
+      "path": "jars/9fb671e96651-netty-transport-4.2.15.Final.jar",
+      "url": "https://libraries.minecraft.net/io/netty/netty-transport/4.2.15.Final/netty-transport-4.2.15.Final.jar",
+      "sha256": "9fb671e96651066cf1a28dad3f1382c7c99df5b8326d4a214d9a375b311f8dc1"
+    },
+    {
+      "path": "jars/9094ae67d01d-fastutil-8.5.18.jar",
+      "url": "https://libraries.minecraft.net/it/unimi/dsi/fastutil/8.5.18/fastutil-8.5.18.jar",
+      "sha256": "9094ae67d01d0ad246f886f11ad557fc2e79c72cbf3feed83e1512a8ae90a74a"
+    },
+    {
+      "path": "jars/b7e3d46c87ba-jna-platform-5.17.0.jar",
+      "url": "https://libraries.minecraft.net/net/java/dev/jna/jna-platform/5.17.0/jna-platform-5.17.0.jar",
+      "sha256": "b7e3d46c87bad2eb409b0e704916bcd81206168e357312dfddd0e253679cd9e0"
+    },
+    {
+      "path": "jars/b3a9408e7c51-jna-5.17.0.jar",
+      "url": "https://libraries.minecraft.net/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar",
+      "sha256": "b3a9408e7c51e08ef0e3bfcc08f443f6ec0f6191ba8cd7c18d53d2b22e5bdbc0"
+    },
+    {
+      "path": "jars/df26cc58f235-jopt-simple-5.0.4.jar",
+      "url": "https://libraries.minecraft.net/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar",
+      "sha256": "df26cc58f235f477db07f753ba5a3ab243ebe5789d9f89ecf68dd62ea9a66c28"
+    },
+    {
+      "path": "jars/e15229452184-commons-compress-1.28.0.jar",
+      "url": "https://libraries.minecraft.net/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar",
+      "sha256": "e1522945218456f3649a39bc4afd70ce4bd466221519dba7d378f2141a4642ca"
+    },
+    {
+      "path": "jars/69e5c9fa35da-commons-lang3-3.20.0.jar",
+      "url": "https://libraries.minecraft.net/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar",
+      "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+    },
+    {
+      "path": "jars/820de7bbaf43-log4j-api-2.26.0.jar",
+      "url": "https://libraries.minecraft.net/org/apache/logging/log4j/log4j-api/2.26.0/log4j-api-2.26.0.jar",
+      "sha256": "820de7bbaf430eaf2e3e5ccb92f23e2085797c5ac4d4f7fc6c8b660fbefa1dbc"
+    },
+    {
+      "path": "jars/406bb3132c47-log4j-core-2.26.0.jar",
+      "url": "https://libraries.minecraft.net/org/apache/logging/log4j/log4j-core/2.26.0/log4j-core-2.26.0.jar",
+      "sha256": "406bb3132c47a5d322e5c571feb0787ca84496469f346eb51f1ef2ee45499902"
+    },
+    {
+      "path": "jars/cfc1bddbd39e-log4j-slf4j2-impl-2.26.0.jar",
+      "url": "https://libraries.minecraft.net/org/apache/logging/log4j/log4j-slf4j2-impl/2.26.0/log4j-slf4j2-impl-2.26.0.jar",
+      "sha256": "cfc1bddbd39e684b698ae968291d8a3b3a55ee0ec2ef3d3ea5c2336a9e151598"
+    },
+    {
+      "path": "jars/e067f29a3701-jorbis-0.0.17.jar",
+      "url": "https://libraries.minecraft.net/org/jcraft/jorbis/0.0.17/jorbis-0.0.17.jar",
+      "sha256": "e067f29a3701426b67ed973036949c6e58ca5bb53eef7240b2e71e286d252a9e"
+    },
+    {
+      "path": "jars/bf1951014517-joml-1.10.8.jar",
+      "url": "https://libraries.minecraft.net/org/joml/joml/1.10.8/joml-1.10.8.jar",
+      "sha256": "bf19510145178df82cd3bd37edd514c13f411531ec5545299fd3abcbc98fe7c2"
+    },
+    {
+      "path": "jars/1fad6e6be755-jspecify-1.0.0.jar",
+      "url": "https://libraries.minecraft.net/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar",
+      "sha256": "1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+    },
+    {
+      "path": "jars/c57a40cedf39-lwjgl-freetype-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.1/lwjgl-freetype-3.4.1.jar",
+      "sha256": "c57a40cedf39c4f3dfe25df596c0933cecb91d323c3fc4c2ed08661d1b79d8c7"
+    },
+    {
+      "path": "jars/963c76cbc89f-lwjgl-freetype-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.1/lwjgl-freetype-3.4.1-natives-windows.jar",
+      "sha256": "963c76cbc89f1c97c8448621f5f0e67da58a6bc43128e197b7fb616dc2395557"
+    },
+    {
+      "path": "jars/dfd620b415a5-lwjgl-freetype-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.1/lwjgl-freetype-3.4.1-natives-windows-arm64.jar",
+      "sha256": "dfd620b415a537eb452e8a16825cbd41ece2b5496794114305a8ddb1efb94dbb"
+    },
+    {
+      "path": "jars/3079ac0b1bc6-lwjgl-freetype-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-freetype/3.4.1/lwjgl-freetype-3.4.1-natives-windows-x86.jar",
+      "sha256": "3079ac0b1bc60be2893dbef788a2ca25255b0e91a997658a20da297298c7e88d"
+    },
+    {
+      "path": "jars/c2d93964f0a8-lwjgl-glfw-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-glfw/3.4.1/lwjgl-glfw-3.4.1.jar",
+      "sha256": "c2d93964f0a8b2a846708c7fb1b0a095e7d79dce8ea4c543969ffef508027190"
+    },
+    {
+      "path": "jars/20adab06c8f5-lwjgl-glfw-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-glfw/3.4.1/lwjgl-glfw-3.4.1-natives-windows.jar",
+      "sha256": "20adab06c8f5bf1e3515a7e64db261cd83ca8131d674dc5f0af93b514deedac8"
+    },
+    {
+      "path": "jars/a4ba37d3ed24-lwjgl-glfw-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-glfw/3.4.1/lwjgl-glfw-3.4.1-natives-windows-arm64.jar",
+      "sha256": "a4ba37d3ed241371c8e83f71acbea81d690e0784b22086d98486ec02363250a6"
+    },
+    {
+      "path": "jars/ca0270e9a6fb-lwjgl-glfw-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-glfw/3.4.1/lwjgl-glfw-3.4.1-natives-windows-x86.jar",
+      "sha256": "ca0270e9a6fb66f7877d5edcb1a7aa939d07a5bc1d781bfa7af38ffa47fe27ef"
+    },
+    {
+      "path": "jars/184866f4dcb4-lwjgl-jemalloc-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.1/lwjgl-jemalloc-3.4.1.jar",
+      "sha256": "184866f4dcb444666e9062f690c389d69e4a62dd7fd9e2bb13ab7bdf3d03bd1e"
+    },
+    {
+      "path": "jars/71785f161a01-lwjgl-jemalloc-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.1/lwjgl-jemalloc-3.4.1-natives-windows.jar",
+      "sha256": "71785f161a015a1a8941a1a3ed7bb007570bb0ef7d95d8725f6acb0634ec577e"
+    },
+    {
+      "path": "jars/9da797a19574-lwjgl-jemalloc-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.1/lwjgl-jemalloc-3.4.1-natives-windows-arm64.jar",
+      "sha256": "9da797a1957442e37b1eeba503a099a47c859cab17e0b3d222cfb03d0d3bfce9"
+    },
+    {
+      "path": "jars/710d97b446e8-lwjgl-jemalloc-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-jemalloc/3.4.1/lwjgl-jemalloc-3.4.1-natives-windows-x86.jar",
+      "sha256": "710d97b446e88ca1ee5a1af8335f3c06b60cb49e29f2c9ce4c49bf1a49d4a4a1"
+    },
+    {
+      "path": "jars/824a68b6f222-lwjgl-openal-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.1/lwjgl-openal-3.4.1.jar",
+      "sha256": "824a68b6f22220feb45cdaf06ebd5496b96e38c50e2588fc3ea0e819f910cf28"
+    },
+    {
+      "path": "jars/28d4065b9c6b-lwjgl-openal-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.1/lwjgl-openal-3.4.1-natives-windows.jar",
+      "sha256": "28d4065b9c6be68454eb4d7c0da665bd4bc7cc77d854c1f67afbd2f38ff730a3"
+    },
+    {
+      "path": "jars/738145e659b5-lwjgl-openal-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.1/lwjgl-openal-3.4.1-natives-windows-arm64.jar",
+      "sha256": "738145e659b5cd6353d7caa99f53af190ec430e0343db723e91204d3e3fef63e"
+    },
+    {
+      "path": "jars/30bbb758865b-lwjgl-openal-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-openal/3.4.1/lwjgl-openal-3.4.1-natives-windows-x86.jar",
+      "sha256": "30bbb758865b104a9079703eb87862318341e3b1f0c504e369f97e4ff7f675fd"
+    },
+    {
+      "path": "jars/a76b8fd9ff74-lwjgl-opengl-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.1/lwjgl-opengl-3.4.1.jar",
+      "sha256": "a76b8fd9ff7428ae5e0f01b8f91a4e44debba87285048e965757742093418702"
+    },
+    {
+      "path": "jars/e174a206709a-lwjgl-opengl-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.1/lwjgl-opengl-3.4.1-natives-windows.jar",
+      "sha256": "e174a206709a91c89a840b5d935831bdb386f435ed224e570a0f15b063b4d9b4"
+    },
+    {
+      "path": "jars/976d4a24ccee-lwjgl-opengl-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.1/lwjgl-opengl-3.4.1-natives-windows-arm64.jar",
+      "sha256": "976d4a24cceebfcf84ec3ba06ba2ab23aa077e4cd25f0aedb74d3b1828534b41"
+    },
+    {
+      "path": "jars/7f5b16207a9f-lwjgl-opengl-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-opengl/3.4.1/lwjgl-opengl-3.4.1-natives-windows-x86.jar",
+      "sha256": "7f5b16207a9fc292ccf113f94b2b49bd5a4582b1b8a001498e6a2b4a2eddb0cb"
+    },
+    {
+      "path": "jars/72293c0d58aa-lwjgl-shaderc-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.1/lwjgl-shaderc-3.4.1.jar",
+      "sha256": "72293c0d58aa07205f67233efed3769111e8312c73bd8e1f4c13a44ab255f27f"
+    },
+    {
+      "path": "jars/d1449f6e4969-lwjgl-shaderc-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.1/lwjgl-shaderc-3.4.1-natives-windows.jar",
+      "sha256": "d1449f6e4969797230545ec77c2f7478862379e586b35530c3d3651c926cc9ca"
+    },
+    {
+      "path": "jars/1ced6adc0187-lwjgl-shaderc-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.1/lwjgl-shaderc-3.4.1-natives-windows-arm64.jar",
+      "sha256": "1ced6adc0187334b0eaace8e7afde299c8fef2ee7721e4427a92f6a06676f002"
+    },
+    {
+      "path": "jars/093a6c27a669-lwjgl-shaderc-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-shaderc/3.4.1/lwjgl-shaderc-3.4.1-natives-windows-x86.jar",
+      "sha256": "093a6c27a669a3e48cf7ba9a707103f3409c2a16b67b0d716373f7c1a38ec723"
+    },
+    {
+      "path": "jars/3c453700ea38-lwjgl-spvc-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.1/lwjgl-spvc-3.4.1.jar",
+      "sha256": "3c453700ea383d6f9ad736ed1d268d45b716d5acf27e9cc4f8c15c8fca1c421c"
+    },
+    {
+      "path": "jars/4ed243f8895a-lwjgl-spvc-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.1/lwjgl-spvc-3.4.1-natives-windows.jar",
+      "sha256": "4ed243f8895a5bf026461b2534b48290d2c06ffd1ad6398cb59368eb76ea1146"
+    },
+    {
+      "path": "jars/c33f9780b1cf-lwjgl-spvc-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.1/lwjgl-spvc-3.4.1-natives-windows-arm64.jar",
+      "sha256": "c33f9780b1cf1b2c0df34df7d1c311d8b495ed364dcc5dc6a9bbbc5f124ed703"
+    },
+    {
+      "path": "jars/bd19824bd17c-lwjgl-spvc-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-spvc/3.4.1/lwjgl-spvc-3.4.1-natives-windows-x86.jar",
+      "sha256": "bd19824bd17cb0f9fabb1291e2dc4cfaa597cf60b5767adee1f29933cf62b6f7"
+    },
+    {
+      "path": "jars/3d77b0a242b8-lwjgl-stb-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.1/lwjgl-stb-3.4.1.jar",
+      "sha256": "3d77b0a242b8a52788934356560191db910ed242ab23c521d55f030b4e867970"
+    },
+    {
+      "path": "jars/f782d33034d9-lwjgl-stb-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.1/lwjgl-stb-3.4.1-natives-windows.jar",
+      "sha256": "f782d33034d90967e92d45633f4a5c11658802f083507d2323f78aede8752b04"
+    },
+    {
+      "path": "jars/7e67e1d44580-lwjgl-stb-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.1/lwjgl-stb-3.4.1-natives-windows-arm64.jar",
+      "sha256": "7e67e1d44580a212f59b46d9160e3a6671826d4ea612eb706a32a090a926a122"
+    },
+    {
+      "path": "jars/f24ea6265ff1-lwjgl-stb-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-stb/3.4.1/lwjgl-stb-3.4.1-natives-windows-x86.jar",
+      "sha256": "f24ea6265ff1a6996ca568fdc8f7ee3f10b34b71f16b30a91a01933465ced66b"
+    },
+    {
+      "path": "jars/3ffad01103b6-lwjgl-tinyfd-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-tinyfd/3.4.1/lwjgl-tinyfd-3.4.1.jar",
+      "sha256": "3ffad01103b6cbc8c12c7156691fd87a96f063600a5ff5c9087d321c6736963a"
+    },
+    {
+      "path": "jars/1d459b70aa8b-lwjgl-tinyfd-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-tinyfd/3.4.1/lwjgl-tinyfd-3.4.1-natives-windows.jar",
+      "sha256": "1d459b70aa8b23d3a4f800e6eee5441792751112980df8f6c08572e7d21f15b6"
+    },
+    {
+      "path": "jars/8a08098521d0-lwjgl-tinyfd-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-tinyfd/3.4.1/lwjgl-tinyfd-3.4.1-natives-windows-arm64.jar",
+      "sha256": "8a08098521d0e3db27eb936f9d1352b48e795caf629f458d83cc7fa9a5528749"
+    },
+    {
+      "path": "jars/bf801c166340-lwjgl-tinyfd-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-tinyfd/3.4.1/lwjgl-tinyfd-3.4.1-natives-windows-x86.jar",
+      "sha256": "bf801c166340aafab8ddfbf005111edff9b25dfa6fb3ef1728945e6e40a01fe1"
+    },
+    {
+      "path": "jars/d6a9677b5d48-lwjgl-vma-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.1/lwjgl-vma-3.4.1.jar",
+      "sha256": "d6a9677b5d487c97b874c18cb9c726197e9a8773f6a1c031ea9f5950b8c0b3c2"
+    },
+    {
+      "path": "jars/b79a4f0679fa-lwjgl-vma-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.1/lwjgl-vma-3.4.1-natives-windows.jar",
+      "sha256": "b79a4f0679fa5902fafb345792314e400dfdcf04b4c15df700363c448c27ba15"
+    },
+    {
+      "path": "jars/7e4ea965c20c-lwjgl-vma-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.1/lwjgl-vma-3.4.1-natives-windows-arm64.jar",
+      "sha256": "7e4ea965c20c9a31bdcbd1f9d8089ddaf7e23ff9b16fb62e436e26fdea055200"
+    },
+    {
+      "path": "jars/53afdca1052e-lwjgl-vma-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vma/3.4.1/lwjgl-vma-3.4.1-natives-windows-x86.jar",
+      "sha256": "53afdca1052ef63ba1b71dde92491a1ddf179b26be2db2a577161e75281a9c2a"
+    },
+    {
+      "path": "jars/7f39be7c1e7b-lwjgl-vulkan-3.4.1.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl-vulkan/3.4.1/lwjgl-vulkan-3.4.1.jar",
+      "sha256": "7f39be7c1e7b14b47d18ec5e23dd25240d2e41c090393524615d760203bf14a6"
+    },
+    {
+      "path": "jars/21872776b9be-lwjgl-3.4.1-natives-windows.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.1/lwjgl-3.4.1-natives-windows.jar",
+      "sha256": "21872776b9be0a93c746d6f28797c12ac47a75e0f0188e5a4fad0c20c9a6a07e"
+    },
+    {
+      "path": "jars/87cbeacc58dc-lwjgl-3.4.1-natives-windows-arm64.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.1/lwjgl-3.4.1-natives-windows-arm64.jar",
+      "sha256": "87cbeacc58dc4a77d7f6eb9929424a34cf34c3e09e4ad8344cdc4e9898366a40"
+    },
+    {
+      "path": "jars/04238aa47ddd-lwjgl-3.4.1-natives-windows-x86.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.1/lwjgl-3.4.1-natives-windows-x86.jar",
+      "sha256": "04238aa47ddde7789a44a1b9bfe2b88d80b900c1130a6ed9cc7b82a8ababf06d"
+    },
+    {
+      "path": "jars/28b8dd3421e1-lwjgl-3.4.1-unsafe.jar",
+      "url": "https://libraries.minecraft.net/org/lwjgl/lwjgl/3.4.1/lwjgl-3.4.1-unsafe.jar",
+      "sha256": "28b8dd3421e11e90d4d93dd3b7c9261aeda2d67645324bee0194e175f6963de2"
+    },
+    {
+      "path": "jars/7b751d952061-slf4j-api-2.0.17.jar",
+      "url": "https://libraries.minecraft.net/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+      "sha256": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832"
+    },
+    {
+      "path": "jars/ed825d10ab13-asm-9.10.1.jar",
+      "url": "https://maven.fabricmc.net/org/ow2/asm/asm/9.10.1/asm-9.10.1.jar",
+      "sha256": "ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb"
+    },
+    {
+      "path": "jars/dede75a21306-asm-analysis-9.10.1.jar",
+      "url": "https://maven.fabricmc.net/org/ow2/asm/asm-analysis/9.10.1/asm-analysis-9.10.1.jar",
+      "sha256": "dede75a21306b65974ecd8f87114ff6970f09fb794157a4ca09ab25c888c2bfc"
+    },
+    {
+      "path": "jars/6d0abefb7cbf-asm-commons-9.10.1.jar",
+      "url": "https://maven.fabricmc.net/org/ow2/asm/asm-commons/9.10.1/asm-commons-9.10.1.jar",
+      "sha256": "6d0abefb7cbf972ea16edb37ec14835372505063a45f976ab7ea889ed9497895"
+    },
+    {
+      "path": "jars/3dfb0d5b6a10-asm-tree-9.10.1.jar",
+      "url": "https://maven.fabricmc.net/org/ow2/asm/asm-tree/9.10.1/asm-tree-9.10.1.jar",
+      "sha256": "3dfb0d5b6a106cd40b5b250e39935fbf2f927f4477546a5369a3ac609cf0506b"
+    },
+    {
+      "path": "jars/1bb99d091fba-asm-util-9.10.1.jar",
+      "url": "https://maven.fabricmc.net/org/ow2/asm/asm-util/9.10.1/asm-util-9.10.1.jar",
+      "sha256": "1bb99d091fba2597dc6d51193e9bbcf0d8447e7ed96bd8f0198b18152f09655c"
+    },
+    {
+      "path": "jars/03f0065023bf-sponge-mixin-0.17.5+mixin.0.8.7.jar",
+      "url": "https://maven.fabricmc.net/net/fabricmc/sponge-mixin/0.17.5+mixin.0.8.7/sponge-mixin-0.17.5+mixin.0.8.7.jar",
+      "sha256": "03f0065023bfc3045d71bfb99872451d9ad5a0800a5a0dac34ab8c7d5c134f5d"
+    },
+    {
+      "path": "jars/d0c5a082e074-fabric-loader-0.20.1.jar",
+      "url": "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.20.1/fabric-loader-0.20.1.jar",
+      "sha256": "d0c5a082e07410aaff9de7ab196aa6b4236002870f9ba3ad5c1260fcce5110ad"
+    },
+    {
+      "path": "jars/40896ee9f1e2-client.jar",
+      "url": "https://piston-data.mojang.com/v1/objects/2dc72797acbc1b63fc16a11c4ac393605f453754/client.jar",
+      "sha256": "40896ee9f1e2bec3c934daac7e93d41e9e3d9c2f8ae0ca366d52ffbfd1afa290"
+    }
+  ]
+}

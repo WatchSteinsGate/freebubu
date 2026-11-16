@@ -1,0 +1,1 @@
+PASS: 15-frame GIF, visible render progress, Full/Half/Quarter/Eighth 4096/2048/1024/512 choices, 1024×512 PNG persistence, GIF export frame count/timing, source reload

@@ -1,0 +1,39 @@
+{
+  "sha256": "10920d2293f01c28438a01ef72993e55a3d486e614875ad1f8d05acd7a16f8f8",
+  "added_entries": [],
+  "removed_entries": [
+    "thatonecatgif/CosmeticsMigration.class",
+    "thatonecatgif/FreeCosmeticsLOL/Editor$Profile.class",
+    "thatonecatgif/FreeCosmeticsLOL/Editor.class",
+    "thatonecatgif/FreeCosmeticsLOL/FreeCosmeticsLOL$Pending.class",
+    "thatonecatgif/FreeCosmeticsLOL/FreeCosmeticsLOL.class",
+    "thatonecatgif/FreeCosmeticsLOL/mixins.json",
+    "thatonecatgif/FreeCosmeticsLOL/mixins/SelfCape.class",
+    "thatonecatgif/GainAccumulator.class",
+    "thatonecatgif/LocalStatisticsStore.class",
+    "thatonecatgif/LocalStatsMod$Throwing.class",
+    "thatonecatgif/LocalStatsMod.class",
+    "thatonecatgif/SerialWriteQueue$Op.class",
+    "thatonecatgif/SerialWriteQueue.class",
+    "thatonecatgif/StatsPath.class",
+    "thatonecatgif/WarningFilter.class",
+    "thatonecatgif/mixins/FailsafePacketHook.class",
+    "thatonecatgif/mixins/OriginalProfitHook.class",
+    "thatonecatgif/mixins/OriginalXpHook.class",
+    "thatonecatgif/mixins/ProfileCardsMixin.class",
+    "thatonecatgif/mixins/ProfileFetchMixin.class",
+    "thatonecatgif/mixins/statistics.json",
+    "thatonecatgif/mixins/warnings.json",
+    "thatonecatgif/warnings/ProfileWarningMixin.class"
+  ],
+  "changed_entries": [
+    "fabric.mod.json",
+    "thatonecatgif/FreeCosmeticsLOL/editor.html",
+    "zip/nebula/client/IIIIIIlllIIIlIIllIIllllIIlIIllIlIIIlllIlIIIllllIIlIIIlllIlIlIllI.class",
+    "zip/nebula/client/IlIlIlIllIIlIlIlIlIlIllIlIIIIIIIIlllIllIIlIIIIlIIllIlIIIllIIllIl.class",
+    "zip/nebula/client/lIIlIIllIlIIllllllIlllIlllIIllIlllIlIIlIIIllIllIIIllIlIIlllIIIlI.class",
+    "zip/nebula/client/llIlIIIlIIlIIllIIlIIIIlllIllIIIIIllIllIIIIIlIIIIIIIIIllIIIIlIIII.class",
+    "zip/nebula/lIlllIlIIllIIllIIIIlIIlIlllllIIIlllllIlllllIIlIIIIllllIllIIIlllI.class"
+  ],
+  "native_dlls_unchanged": true
+}

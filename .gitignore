@@ -1,0 +1,9 @@
+.cache/
+build/
+__pycache__/
+.venv/
+*.jar
+*.dll
+*.exe
+*.log
+!docs/evidence/*.log

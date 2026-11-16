@@ -1,0 +1,11 @@
+export WINEPREFIX=/workspace/tools/wine-prefix
+export WINEARCH=win64
+export WINEDEBUG=-all
+export WINEDLLPATH=/workspace/tools/runtime/usr/lib/x86_64-linux-gnu/wine
+export LD_LIBRARY_PATH=/workspace/tools/runtime/usr/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+export PATH=/workspace/tools/runtime/usr/lib/wine:/workspace/tools/runtime/usr/bin:$PATH
+export WINESERVER=/workspace/tools/runtime/usr/lib/wine/wineserver64
+export WINELOADER=/workspace/tools/runtime/usr/lib/wine/wine64
+export WINEDATADIR=/workspace/tools/runtime/usr/share/wine
+export XDG_CACHE_HOME=/workspace/tools/cache
+export XDG_RUNTIME_DIR=/workspace/tools/xdg

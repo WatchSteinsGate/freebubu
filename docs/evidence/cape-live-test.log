@@ -1,0 +1,8 @@
+PASS upload and crop png
+PASS upload and crop jpg
+PASS upload and crop webp
+PASS upload and crop gif
+PASS choose/replace file dialogs and every available atlas-size button
+PASS GIF export: 2 frames, exact 100/200 ms timing, and save/reload
+PASS import animated cape atlas
+PASS solid mode, six face selectors/colors, remove, PNG export, 3D rotation; no JS errors

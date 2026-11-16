@@ -1,0 +1,1 @@
+import{D as e,b as t,mt as n,xt as r}from"./DAji9eeE.js";import{t as i}from"./BDNMzG2s.js";import{t as a}from"./l4m9ZAh9.js";import{t as o}from"./IWi-RRvC.js";var s={},c={class:`relative overflow-x-hidden bg-neutral-950`};function l(i,s){let l=a,u=o;return n(),t(`div`,c,[e(l),e(u),r(i.$slots,`default`)])}var u=i(s,[[`render`,l]]);export{u as default};

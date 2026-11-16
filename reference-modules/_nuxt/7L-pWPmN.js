@@ -1,0 +1,1 @@
+import{r as e}from"./DuruhzSU.js";var t=e(`/nebula.webp`);export{t};

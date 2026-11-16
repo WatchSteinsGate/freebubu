@@ -1,0 +1,1 @@
+[05:16:48] [patch-validation/INFO]: [STDOUT]: [PatchProbe] PASS: original stats fetch returns persisted statistics; removed helpers/mixins are absent

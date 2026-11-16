@@ -1,0 +1,16 @@
+{
+  "release_tag": "handoff-2026-11-16",
+  "repository": "WatchSteinsGate/freebubu",
+  "artifacts": [
+    {
+      "filename": "Nebula-Windows-original.jar",
+      "size": 189949536,
+      "sha256": "6bcb4aa0c1dda8a756a59014349305dcd14ce3212fd779cba26c64e038995621"
+    },
+    {
+      "filename": "Nebula-Windows-direct.jar",
+      "size": 190808018,
+      "sha256": "10920d2293f01c28438a01ef72993e55a3d486e614875ad1f8d05acd7a16f8f8"
+    }
+  ]
+}

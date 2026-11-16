@@ -1,0 +1,1 @@
+var e=/\.(mp4|webm|mov|m4v|ogv)$/i;function t(t){try{return e.test(new URL(t,`http://localhost`).pathname)}catch{return!1}}export{t};

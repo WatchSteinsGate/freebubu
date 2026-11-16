@@ -1,0 +1,3 @@
+# Preserve supplied/minified assets byte-for-byte, including their whitespace.
+editor/editor.html -whitespace linguist-generated=true
+reference-modules/** -whitespace linguist-vendored=true
