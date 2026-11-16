@@ -2,8 +2,8 @@
 
 ## Current state and deliverables
 
-The final deliverable is `Nebula-Windows-direct.jar`, uploaded to the GitHub
-handoff release with its original input, `Nebula-Windows-original.jar`. The input
+The final deliverable is `Nebula-Windows-direct.jar`, stored with Git LFS under `artifacts/`, alongside its original input,
+`Nebula-Windows-original.jar`; the GitHub handoff release links to these files. The input
 is the unmodified `Nebula-Windows.jar` originally supplied through storage.to.
 Use the manifest/checksum files at the repository root to identify exact artifacts.
 
@@ -67,7 +67,9 @@ retained instruction references to removed helper classes fail the build.
 
 `metadata/dependencies.lock.json` pins the build classpath to SHA256 values and
 records its original artifact URLs or nested-JAR extraction locations. The input
-JAR is separately hash checked. Large binaries belong to release assets.
+JAR is separately hash checked. Large binaries are Git LFS objects. Direct release-asset upload was rejected
+with HTTP 401 by `uploads.github.com` despite working API/repository access.
+GitHub Git LFS authentication was tested successfully and used instead.
 
 ## Statistics
 

@@ -8,7 +8,9 @@ JAR and its direct-patched successor.
 **Download the current JAR and the required original input from the
 [handoff release](https://github.com/WatchSteinsGate/freebubu/releases/tag/handoff-2026-11-16).**
 Checksums and sizes are recorded in [metadata/builds.json](metadata/builds.json)
-and [SHA256SUMS](SHA256SUMS). Large JARs are release assets, not Git blobs.
+and [SHA256SUMS](SHA256SUMS). Large JARs are stored with Git LFS under `artifacts/`; the release links to them.
+The ordinary Git history stores small LFS pointers. Use `git lfs pull` to fetch
+the binaries after cloning, or follow the download links on the release page.
 
 The direct build changes five existing Java classes, the existing editor resource,
 and mod metadata; it removes 23 stats/cosmetics add-on entries and adds **zero JAR
@@ -36,7 +38,7 @@ export JAVA_HOME=/path/to/jdk-25
 ./test-stats.sh
 ```
 
-`build.sh` downloads the pinned original release asset and dependency artifacts
+`build.sh` downloads the pinned original artifact and dependency artifacts
 unless cached, verifies SHA256 checksums, compiles build-time templates, and merges
 them into the existing classes with ASM. Output:
 

@@ -8,7 +8,7 @@ if [[ -n "$jdk_bin" ]]; then javac_cmd="$jdk_bin/javac"; java_cmd="$jdk_bin/java
 base_jar=${NEBULA_BASE_JAR:-$project_root/.cache/Nebula-Windows-original.jar}
 if [[ ! -f "$base_jar" ]]; then
  mkdir -p "$(dirname -- "$base_jar")"
- curl -fSL --retry 2 --max-time 300 https://github.com/WatchSteinsGate/freebubu/releases/download/handoff-2026-11-16/Nebula-Windows-original.jar -o "$base_jar"
+ curl -fSL --retry 2 --max-time 300 https://media.githubusercontent.com/media/WatchSteinsGate/freebubu/handoff-2026-11-16/artifacts/Nebula-Windows-original.jar -o "$base_jar"
 fi
 python3 - "$base_jar" <<'PY'
 import hashlib,json,pathlib,sys
